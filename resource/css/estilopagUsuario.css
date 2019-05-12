@@ -1,0 +1,87 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	margin:auto;
+	text-align: center;
+	width: 960px;
+}
+
+
+/*estilos header*/
+
+div.header h1 img{
+	padding-top:20px; 
+	border-radius: 10px;
+	-webkit-box-shadow: 0 0 10px 5px rgba(255,255,255,0.3);
+	box-shadow: 0 0 10px 5px rgba(0,0,0,0.3); 
+	margin-top:7px; 
+	padding-left: 120px;
+	padding-right: 130px;
+}
+
+div.nav{
+	right: 50px;
+	padding-top: 10px;
+	position:absolute;
+	z-index: 2;
+}
+
+div.contenido{
+	padding-top: 20px;
+	position: absolute; 
+	z-index: 1;
+	margin: 150px;
+}
+
+div.con{
+	position: absolute;
+	left: 1050px;
+	top: 20px;
+}
+
+div.con{
+	width: 150Px;
+	height: 50px;
+	
+}
+
+div#seis{
+	background-color: tomato;
+	border-radius:10%;
+}
+
+img.icono{
+	margin: 5px;
+	padding: 10px;
+	background-color: rgba(255,255,255,.15);
+	-webkit-border-radius:30%;/*box-shadow 0px desplazamineto horizontal 0px vertical 0px de difuminacion 
+	30px de expancion y color */
+	box-shadow: 0px 0px 0px 20px rgba(255,255,255,0);
+	transition: box-shadow 0.4s;
+
+}
+
+span.texto2{
+	text-align: center;
+	color: #000;
+	font-size: 1.2em;
+	opacity: 0.5;
+	transition: padding-top .4s;
+	vertical-align:20px;
+}
+
+div.con:hover span.texto2{
+	padding:10px;
+	opacity: 1;
+}
+
+div.con:hover img.icono{
+	box-shadow: 0px 0px 0px 0px rgba(255,255,255,.6);
+}
+
+img.fondo{
+	box-shadow: 0 0 10px 5px rgba(0,0,255,0.3);
+}

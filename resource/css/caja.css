@@ -1,0 +1,120 @@
+/***************CAJA**********************/
+
+.form-control {
+    float: left;
+    border-radius: 0px;
+    border: none;
+    z-index: 1;
+    border-bottom-width: 0 ;
+    width: 100%;
+    color: #999;
+    font: 15px/24px "Lato", Arial, sans-serif;
+    font-style: italic;
+    box-shadow: none;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, 0);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.input-effect {
+    float: left;
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.effect-17 {
+    border: 0;
+    padding: 4px 0;
+    border-bottom: 1.5px solid #ccc;
+    background-color: transparent;
+}
+
+.effect-17~.focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background-color: rgba(34, 144, 201, 0.9);
+    transition: 0.4s;
+}
+
+.effect-17:focus~.focus-border {
+    width: 100%;
+    transition: 0.4s;
+    left: 0;
+}
+
+.effect-17~label {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    top: 9px;
+    color: #aaa;
+    transition: 0.1s;
+    font-style: italic;
+    z-index: -1;
+    letter-spacing: 0.5px;
+    text-shadow: none;
+}
+
+
+.effect-17:focus~label {
+    top: -16px;
+    font-size: 13px; 
+    color: rgba(34, 144, 201, 0.9);
+    transition: 0.1s;
+}
+
+.has-content.effect-17~label {
+    top: -16px;
+    font-size: 13px;
+    transition: 0.1s;
+}
+
+
+/***************FIN CAJA**********************/
+
+/***************SELECT**********************/
+
+
+.labelfija.effect-17~label {
+    top: -16px;
+    font-size: 15px;
+    color: #aaa;
+    transition: 0.1s;
+}
+
+select:active,
+select:focus~.labelselect {
+    color: rgba(34, 144, 201, 0.9);
+    font-size: 13px;
+}
+
+div.caja{
+    height: 70vh;
+    width: 25vw;
+}
+
+.cajabtn{
+    position: absolute;
+    top: 90%;
+    height: 10vh;
+    width: 20vw;
+}
+a.color{
+    background-color: #28a745;
+    color:white;
+}
