@@ -1,5 +1,5 @@
 
-	<link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu.css">
+	<link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
 
 	<header>
 		 <div class="contenedor" id="uno">

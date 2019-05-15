@@ -15,8 +15,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="<?= base_url(); ?>resource/css/radiocss.css" rel="stylesheet" />
         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/fontawesome-all.css" async >
         <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
-        <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilospagAdmin.css">
-         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu.css">
+        <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilospagAdmin2.css">
+         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
 
         
         <!--<link rel="stylesheet" href="<?= base_url(); ?>resource/css/font-awesome.css" async >
@@ -39,7 +39,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <img class="barra d-inline-block align-top align-self-center" alt="Responsive image " src="<?= base_url();?>resource/images/barras_grises.jpg" alt="" />
             </div>
         </div>-->
-        <div class="header">
+        <div class="header2">
             <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
        </div>
 
@@ -51,69 +51,57 @@ defined('BASEPATH') OR exit('No direct script access allowed');
          <div class="contenedor" id="uno">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/familia.png">
             <span class="texto">Pacientes</span>
-            <ul class="submenu">
+           <!-- <ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li> 
-            </ul>
+            </ul>-->
         </div>
 
         <div class="contenedor" id="dos">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/medicina.png">
             <span class="texto">Productos</span>
-           <!-- <ul class="submenu">
+            <!--<ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
             </ul>-->
         </div>
 
-        <div class="contenedor" id="tres">
+        <a href="<?= base_url('')?>Usuarios"><div class="contenedor" id="tres">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">
             <span class="texto">Usuarios</span>
-            <ul class="submenu">
+            <!--<ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
-            </ul>
-        </div>
+            </ul>-->
+        </div></a>
 
         <div class="contenedor" id="cuatro">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png" >
             <span class="texto">Cotizaciones</span>
-            <ul class="submenu">
+           <!-- <ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
-            </ul>
+            </ul>-->
         </div>
         
         <div class="contenedor" id="cinco">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/portapapeles.png">
             <span class="texto">Consultas</span>
-            <ul class="submenu">
+           <!-- <ul class="submenu">
                 <li><a href="#">Pacientes</a></li>
                 <li><a href="#">Productos</a></li>
                 <li><a href="#">Usuarios</a></li>
                 <li><a href="#">Cotizaciones</a></li>
-            </ul>
+            </ul>-->
         </div>
     </header>
-   <!-- <div class="btn-toolbar row d-flex justify-content-center pt-3" role="toolbar">
-            <div class="btn-group" role="group">
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Catalog">Inicio</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Productos">Productos</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>CatalogoClientes">Clientes</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Prospecto">Prospectos</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>UserAdmin">Pedidos</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Login">Cerrar sesión</a></button>
-            </div>
-    </div>-->
-   <!-- <?php
-        include("menuAdmin.php");
-     ?> -->
-
+ 
    
+
   
 
 
