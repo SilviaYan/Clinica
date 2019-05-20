@@ -43,10 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
        </div>
 
-    <a href="<?= base_url('')?>Productos"><div class="con" id="seis">
+    <div class="con" id="seis">
         <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png" >
         <span class="texto2">Logout</span>      
-    </div></a>
+    </div>
 
          <div class="contenedor" id="uno">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/familia.png">
@@ -58,7 +58,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             </ul>-->
         </div>
 
-        <div class="contenedor" id="dos">
+        <a href="<?= base_url('')?>productos"><div class="contenedor" id="dos">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/medicina.png">
             <span class="texto">Productos</span>
             <!--<ul class="submenu">
@@ -66,7 +66,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
             </ul>-->
-        </div>
+        </div></a>
 
         <a href="<?= base_url('')?>Usuarios"><div class="contenedor" id="tres">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">

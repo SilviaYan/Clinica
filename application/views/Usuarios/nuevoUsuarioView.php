@@ -36,11 +36,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
      <div class="row">
      <div class="col-xs-6 col-md-4">
-        Usuario: <input type="text" class="form-control" name="usuario" >
+        Usuario: <input type="text" class="form-control" name="usuario" required autofocus>
        </div>
 
         <div class="col-xs-6 col-md-4">
-        Contraseña: <input type="password" class="form-control" name="contrasena" >
+        Contraseña: <input type="password" class="form-control" name="contrasena" required autofocus>
        </div>
         
        <div class="col-xs-6 col-md-4">
