@@ -21,7 +21,7 @@
                 <br>
                 <?php
                 foreach ($patients as $key) {
-                ?>
+                    ?>
                     <tr>
                         <th scope="row" style="color: #000000;"><?= $key['pID'] ?></th>
                         <td style="color: #000000;"><?= $key['pNombre'] ?></td>
@@ -30,15 +30,13 @@
                         <td style="color: #000000;"><?= $key['email'] ?></td>
                         <td>
                             <form action='<?= base_url('') ?>Pacientes/editar' method='post'>
-                            <button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['uID'] ?>" 
-                            id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
+                                <button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['uID'] ?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
                         </td>
 
-                        <td> <button type="button" class="btn btn-danger btn-circle gira" data-toggle="modal" 
-                        data-target="#confirmacionEliminar<?= $key['pID'] ?>"><i class="fas fa-trash-alt"></i></button>
+                        <td> <button type="button" class="btn btn-danger btn-circle gira" data-toggle="modal" data-target="#confirmacionEliminar<?= $key['pID'] ?>"><i class="fas fa-trash-alt"></i></button>
 
                             <div class="modal fade" id="confirmacionEliminar<?= $key['pID'] ?>
-                            " tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                " tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">

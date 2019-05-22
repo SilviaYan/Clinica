@@ -80,7 +80,7 @@ class Pacientes extends CI_Controller{
 
     public function nuevoPaciente(){
         $this->load->view('base/headAdmin');
-        $this->load->view('Productos/agregarPacientesView');
+        $this->load->view('Pacientes/agregarPacienteView');
         $this->load->view('base/js');
         $this->load->view('base/findoc'); 
     }
