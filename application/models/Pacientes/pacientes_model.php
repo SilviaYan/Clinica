@@ -55,19 +55,19 @@ class pacientes_model extends CI_Model {
 
     function obtenerValorCampos($idPaciente){
         $resultado = $this->db->query("select * from Pacientes where pID= '".$idPaciente."';");
-        return $resultado->result_arrau();
+        return $resultado->result_array();
     }
     function delete($idPaciente){
         $resultado = $this->db->query("delete from Pacientes where pID = '".$idPaciente."'");
     }
 
-    function modifyPatient(
+    function modifyPatient($id,
         $nombre,$apellidoP,$apellidoM,$año,$sexo, $estado,
         $telefono,$fecha,$municipio, $direccion,
         $email, $asegurado, $lesiones,$transtornos,
         $prob_respiratorios,$envenenamiento,
         $otros, $adicciones, $alergias, $alcoholismo,
-        $cirujias, $fracturas, $transfusiones,$idPaciente
+        $cirujias, $fracturas, $transfusiones
     ) {
 
         $datos = array(
@@ -97,7 +97,7 @@ class pacientes_model extends CI_Model {
             'pIDMod'         => 1,
             'pMod'           => date('y-m-d')
         );
-        $this->db->where('pID', $idPaciente);
+        $this->db->where('pID', $id);
         $this->db->update('Pacientes', $datos);
     }
 

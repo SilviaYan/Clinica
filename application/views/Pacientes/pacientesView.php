@@ -5,14 +5,14 @@
 
     <div class="row m-1 pt-2  col-12 justify-content-center">
         <!--<H5 style="color:green">PRODUCTOS</H5>-->
-        <table class="table table-hover table-striped col-12" id="tablaPacientes" style="width:60%">
+        <table class="table table-hover table-striped col-12" id="tablaUsuario" style="width:100%">
             <thead class="" style="background-color:#A1ABA1">
                 <tr>
-                    <th width="10%">ID</th>
-                    <th width="10%">Nombre</th>
-                    <th width="10%">Apellido Paterno</th>
-                    <th width="10%">Apellido Materno</th>
-                    <th width="10%">Email </th>
+                    <th width="20%">ID</th>
+                    <th width="20%">Nombre</th>
+                    <th width="20%">Apellido Paterno</th>
+                    <th width="20%">Apellido Materno</th>
+                    <th width="20%">Email </th>
                     <th width="6%"><i class="fas fa-pencil-alt"></i></th>
                     <th width="6%"><i class="fas fa-trash-alt"></i></th>
                 </tr>
@@ -29,7 +29,7 @@
                         <td style="color: #000000;"><?= $key['pApellidoM'] ?></td>
                         <td style="color: #000000;"><?= $key['email'] ?></td>
                         <td>
-                            <form action='<?= base_url('') ?>Pacientes/editar' method='post'>
+                            <form action='<?= base_url('') ?>Pacientes/agregar' method='post'>
                                 <button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['pID'] ?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
                         </td>
 
