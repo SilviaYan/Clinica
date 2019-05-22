@@ -9,11 +9,12 @@ class pacientes_model extends CI_Model {
     {
         parent ::__construct();
         $this->load->library('session');
+        $this->load->database();
     }
 
     function getPatients(){
-        $result = $this->db->query( "select pID, pNombre, pApellidoM,
-            pApellidoP, email from Pacientes;");
+        $result = $this->db->query( "select pID, pNombre,pApellidoP, 
+        pApellidoM, email from Pacientes;");
          return $result->result_array();
     }
 
@@ -96,8 +97,8 @@ class pacientes_model extends CI_Model {
             'pIDMod'         => 1,
             'pMod'           => date('y-m-d')
         );
-        $this->db->where('Pacientes', $idPaciente);
-        $this->db->update('Paciente', $datos);
+        $this->db->where('pID', $idPaciente);
+        $this->db->update('Pacientes', $datos);
     }
 
 
