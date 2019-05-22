@@ -37,7 +37,8 @@
                         echo "URGENTE";
                       } else {
                         echo $key['pExiste'];
-                      }?></td>
+                      }
+                      ?></td>
                       <td style="color: #000000;"><?= $key['pTipo']?></td>
                       <td style="color: #000000;"><?= $key['pPrecio']?></td>
                       <td style="color: #000000;"><?= $key['pCosto']?></td>
