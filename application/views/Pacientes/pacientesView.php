@@ -30,7 +30,7 @@
                         <td style="color: #000000;"><?= $key['email'] ?></td>
                         <td>
                             <form action='<?= base_url('') ?>Pacientes/editar' method='post'>
-                                <button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['uID'] ?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
+                                <button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['pID'] ?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
                         </td>
 
                         <td> <button type="button" class="btn btn-danger btn-circle gira" data-toggle="modal" data-target="#confirmacionEliminar<?= $key['pID'] ?>"><i class="fas fa-trash-alt"></i></button>

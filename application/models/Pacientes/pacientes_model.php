@@ -58,7 +58,7 @@ class pacientes_model extends CI_Model {
         return $resultado->result_arrau();
     }
     function delete($idPaciente){
-        $resultado = $this->db->query("delete from Pacientes where pID = '".$idPaciente."';");
+        $resultado = $this->db->query("delete from Pacientes where pID = '".$idPaciente."'");
     }
 
     function modifyPatient(
