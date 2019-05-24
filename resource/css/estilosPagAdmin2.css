@@ -61,7 +61,7 @@ img.icono{
 	transition: box-shadow 0.4s;
 }
 
-span.texto2{
+a.texto2{
 	text-align: center;
 	color: black;
 	font-size: 1.2em;
@@ -70,7 +70,7 @@ span.texto2{
 	vertical-align:middle;
 }
 
-div.con:hover span.texto2{
+div.con:hover a.texto2{
 	padding:10px;
 	opacity: 1;
 }

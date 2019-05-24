@@ -18,7 +18,7 @@ public function index() {
   //      $this->load->view('base/head');
         $this->load->view('login/login');
      //   $this->load->view('base/footer');
-      //  $this->load->view('base/js');
+        $this->load->view('base/js');
       //  $this->load->view('base/findoc');
     }
 
@@ -60,22 +60,23 @@ public function index() {
                     //print_r("Error de Login");
                     echo '<script language="javascript">alert("Inicio de Sesión Incorrecto");</script>';
                     //$this->load->view('base/head');
-                    $this->load->view('login/LoginView');
+                    $this->load->view('login/login');
                    // $this->load->view('base/footer');
                    // $this->load->view('base/js');
                    // $this->load->view('base/findoc');
                 break;
                 case 1:
          
-                     $solicitud = $this->model_solicitud->getRequest();
+                  /*   $solicitud = $this->model_solicitud->getRequest();
 
-                     $data['solicitud'] = $solicitud;
+                     $data['solicitud'] = $solicitud;*/
                      //$id['log'] = $login;
 
-                    $this->load->view('base/headAdmin');
+                    $this->load->view('base/headClient');
 
 
-                    $this->load->view('solicitud/viewSolicitudes',$data);
+
+                    //$this->load->view('solicitud/viewSolicitudes',$data);
 
                     //$this->load->view('base/footer');
                   //  $this->load->view('base/js');
@@ -85,12 +86,14 @@ public function index() {
                 case 2:
 
                     $this->load->view('base/headAdmin');
-                    $solicitud = $this->model_solicitud->getRequest();
+                 //   $this->load->view('base/body');
+                // $this->load->view('base/menuAdmin');
+                   /* $solicitud = $this->model_solicitud->getRequest();
 
                      $data['solicitud'] = $solicitud;
 
 
-                    $this->load->view('solicitud/viewSolicitudes',$data);
+                    $this->load->view('solicitud/viewSolicitudes',$data);*/
 
                    // $this->load->view('base/footer');
                    // $this->load->view('base/js');

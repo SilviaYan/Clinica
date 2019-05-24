@@ -38,13 +38,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         </div>
     </header>
 
-    <div class="btn-toolbar row d-flex justify-content-center pt-3" role="toolbar">
-            <div class="btn-group" role="group">
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Catalog">Inicio</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>AboutUs">¿Quiénes somos?</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Contact">Contacto</a></button>
-                <button type="button" class ="btn btn-success"><a style="text-decoration: none;color:white;font-size:20px" href="<?= base_url('')?>Login">Iniciar sesión</a></button>
-            </div>
+     <div class="header">
+            <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
+       </div>
+
+    <a href="<?= base_url('')?>Productos"><div class="con" id="seis">
+        <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png" >
+        <span class="texto2">Logout</span>      
+    </div></a>
+
     </div> 
 
 

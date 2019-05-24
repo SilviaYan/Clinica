@@ -21,6 +21,7 @@
 
     </head>
     <body>
+
             <div class="content">
                 <div class="title m-b-md">
                     HealthCare
@@ -28,15 +29,15 @@
                 <div class="contenedorform">     
                     <div class="login">
                         <h2>Iniciar Sesion</h2> 
-                   <form action="<?php $_SERVER['PHP_SELF']?>" method="post">
+                   <form action="<?php echo base_url(); ?>Login/ingresar" method="post">
                        <input type="text" name="usuario" placeholder="Usuario" required>
                        <input type="password" name="password" placeholder="Contraseña" required="">
                        <input type="submit" value="Iniciar Sesion">
                    </form> 
                     </div>
-                <div class="forgotpass">
+               <!-- <div class="forgotpass">
                 <a href="paginaUsuario.php">Olvide mi Contraseña</a>
-                </div>
+                </div>-->
             </div>
             </div>
     </body>

@@ -29,10 +29,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 
     <div class="col-xs-6 col-md-4">
-      Apellido Materno: <input type="text" class="form-control" name="apellidoM" required autofocus />
+      Apellido Paterno: <input type="text" class="form-control" name="apellidoP" required autofocus />
     </div>
     <div class="col-xs-6 col-md-4">
-      Apellido Paterno: <input type="text" class="form-control" name="apellidoP" required autofocus />
+      Apellido Materno: <input type="text" class="form-control" name="apellidoM" required autofocus />
     </div>
   </div>
 

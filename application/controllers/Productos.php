@@ -14,14 +14,20 @@ class Productos extends CI_Controller {
     }
 
         public function index() {
+      
         $products = $this->productos_model->getProducts();
 
         $data['products'] = $products;
 
-        $this->load->view('base/headAdmin');
+        if($_SESSION['login']==2){
+             $this->load->view('base/headAdmin');
+           }else if($_SESSION['login']==1){
+             $this->load->view('base/headClient');
+           }
+      //  $this->load->view('base/headAdmin');
         $this->load->view('Productos/productosView',$data);
         $this->load->view('base/js');
-        $this->load->view('base/findoc');
+      //  $this->load->view('base/body');
     }
     
 
