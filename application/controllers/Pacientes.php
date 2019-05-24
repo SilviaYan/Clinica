@@ -126,7 +126,7 @@ class Pacientes extends CI_Controller{
         $cirujias           = $this->input->post('cirujias');
         $fracturas          = $this->input->post('fracturas');
         $transfusiones      = $this->input->post('transfusiones');
-        $id                 = $this->input->post('pID');
+        $id                 = $this->input->post( 'idpaciente');
 
 
         $this->pacientes_model-> modifyPatient(

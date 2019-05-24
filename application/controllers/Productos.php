@@ -25,7 +25,7 @@ class Productos extends CI_Controller {
     }
     
 
-    public function agregar(){
+    public function modificar(){
         $idProducto = $this->input->post('editar');
         $dato ['producto']= $this->productos_model->obtenerValorCampos($idProducto);
 
