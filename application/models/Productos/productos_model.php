@@ -62,11 +62,6 @@ class productos_model extends CI_Model {
 
        $this->db->where('prodID', $idproducto);
        $this->db->update('Productos', $datos);
-// Produces:
-//     
-//      UPDATE mytable
-//      SET title = '{$title}', name = '{$name}', date = '{$date}'
-//      WHERE id = $id 
 
      }
 

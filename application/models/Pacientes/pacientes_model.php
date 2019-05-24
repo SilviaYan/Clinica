@@ -18,16 +18,36 @@ class pacientes_model extends CI_Model {
          return $result->result_array();
     }
 
-    function insertPatient($nombre, $apellidoP, $apellidoM, $año, $sexo,$estado,$telefono,
-            $fecha, $municipio,$direccion,$email, $asegurado, $lesiones, $transtornos,
-            $prob_respiratorios, $envenenamiento,$otros,$adicciones,$alergias, $alcoholismo,
-            $cirujias, $fracturas, $transfusiones){
+    function insertPatient( 
+        $nombre,
+        $apellidoM,
+        $apellidoP,
+        $año,
+        $sexo,
+        $estado,
+        $telefono,
+        $fecha,
+        $municipio,
+        $direccion,
+        $email,
+        $asegurado,
+        $lesiones,
+        $transtornos,
+        $prob_respiratorios,
+        $envenenamiento,
+        $otros,
+        $adicciones,
+        $alergias,
+        $alcoholismo,
+        $cirujias,
+        $fracturas,
+        $transfusiones){
 
     $datos = array(
             'pNombre'         => $nombre,
             'pApellidoM'      => $apellidoM,
             'pApellidoP'      => $apellidoP,
-            'pAño'            => $$año,
+            'pAño'            => $año,
             'pSexo'           => $sexo,
             'pEstado'         => $estado,
             'pTelefono'       => $telefono,
@@ -61,20 +81,38 @@ class pacientes_model extends CI_Model {
         $resultado = $this->db->query("delete from Pacientes where pID = '".$idPaciente."'");
     }
 
-    function modifyPatient($id,
-        $nombre,$apellidoP,$apellidoM,$año,$sexo, $estado,
-        $telefono,$fecha,$municipio, $direccion,
-        $email, $asegurado, $lesiones,$transtornos,
-        $prob_respiratorios,$envenenamiento,
-        $otros, $adicciones, $alergias, $alcoholismo,
-        $cirujias, $fracturas, $transfusiones
+    function modifyPatient( 
+        $nombre,
+        $apellidoM,
+        $apellidoP,
+        $año,
+        $sexo,
+        $estado,
+        $telefono,
+        $fecha,
+        $municipio,
+        $direccion,
+        $email,
+        $asegurado,
+        $lesiones,
+        $transtornos,
+        $prob_respiratorios,
+        $envenenamiento,
+        $otros,
+        $adicciones,
+        $alergias,
+        $alcoholismo,
+        $cirujias,
+        $fracturas,
+        $transfusiones,
+        $idPaciente
     ) {
 
         $datos = array(
             'pNombre'         => $nombre,
             'pApellidoM'      => $apellidoM,
             'pApellidoP'      => $apellidoP,
-            'pAño'            => $$año,
+            'pAño'            => $año,
             'pSexo'           => $sexo,
             'pEstado'         => $estado,
             'pTelefono'       => $telefono,
@@ -97,7 +135,7 @@ class pacientes_model extends CI_Model {
             'pIDMod'         => 1,
             'pMod'           => date('y-m-d')
         );
-        $this->db->where('pID', $id);
+        $this->db->where('pID', $idPaciente);
         $this->db->update('Pacientes', $datos);
     }
 

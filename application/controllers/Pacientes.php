@@ -23,7 +23,7 @@ class Pacientes extends CI_Controller{
         $this->load->view('base/findoc');
     }
 
-    public function agregar(){
+    public function modificar(){
         $idPaciente = $this->input->post('editar');
         $dato['paciente'] = $this->pacientes_model->obtenerValorCampos($idPaciente);
 
@@ -61,14 +61,30 @@ class Pacientes extends CI_Controller{
          $transfusiones      = $this->input->post('transfusiones');
 
 
-         $this ->pacientes_model->insertPatient($nombre,
-            $apellidoP,$apellidoM,$año,
-            $sexo,$estado, $telefono,
-            $fecha,$municipio,$direccion,
-            $email,$asegurado, $lesiones,
-            $transtornos,$prob_respiratorios, $envenenamiento,
-            $otros, $adicciones, $alergias,
-            $alcoholismo,$cirujias,$fracturas, $transfusiones);
+         $this ->pacientes_model->insertPatient( 
+            $nombre,
+            $apellidoM,
+            $apellidoP,
+            $año,
+            $sexo,
+            $estado,
+            $telefono,
+            $fecha,
+            $municipio,
+            $direccion,
+            $email,
+            $asegurado,
+            $lesiones,
+            $transtornos,
+            $prob_respiratorios,
+            $envenenamiento,
+            $otros,
+            $adicciones,
+            $alergias,
+            $alcoholismo,
+            $cirujias,
+            $fracturas,
+            $transfusiones);
             redirect(base_url().'Pacientes');
     }
 
@@ -110,18 +126,35 @@ class Pacientes extends CI_Controller{
         $cirujias           = $this->input->post('cirujias');
         $fracturas          = $this->input->post('fracturas');
         $transfusiones      = $this->input->post('transfusiones');
-        $id = $this->input->post('idpaciente');
+        $id                 = $this->input->post('pID');
 
 
-        $this->pacientes_model-> modifyPatient($id,
-            $nombre, $apellidoP,  $apellidoM, $año,$sexo,
-            $estado, $telefono,$fecha, $municipio,
-            $direccion, $email,  $asegurado,  $lesiones, $transtornos,
-            $prob_respiratorios,$envenenamiento, $otros, $adicciones,
-            $alergias, $alcoholismo,$cirujias, $fracturas, $transfusiones
+        $this->pacientes_model-> modifyPatient(
+            $nombre,
+            $apellidoM,
+            $apellidoP,
+            $año,
+            $sexo,
+            $estado,
+            $telefono,
+            $fecha,
+            $municipio,
+            $direccion,
+            $email,
+            $asegurado,
+            $lesiones,
+            $transtornos,
+            $prob_respiratorios,
+            $envenenamiento,
+            $otros,
+            $adicciones,
+            $alergias,
+            $alcoholismo,
+            $cirujias,
+            $fracturas,
+            $transfusiones,
+            $id
         );
         redirect(base_url() . 'Pacientes');
     }
 }
-
-?>

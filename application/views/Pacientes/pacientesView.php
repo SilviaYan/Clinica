@@ -29,10 +29,9 @@
                         <td style="color: #000000;"><?= $key['pApellidoM'] ?></td>
                         <td style="color: #000000;"><?= $key['email'] ?></td>
                         <td>
-                            <form action='<?= base_url('') ?>Pacientes/agregar' method='post'>
+                            <form action='<?= base_url('') ?>Pacientes/modificar' method='post'>
                                 <button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['pID'] ?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
                         </td>
-
                         <td> <button type="button" class="btn btn-danger btn-circle gira" data-toggle="modal" data-target="#confirmacionEliminar<?= $key['pID'] ?>"><i class="fas fa-trash-alt"></i></button>
 
                              <div class="modal fade" id="confirmacionEliminar<?= $key['pID'] ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -45,10 +44,8 @@
                                              </button>
                                          </div>
                                          <div class="modal-body">
-                                             <h5> El usuario <strong><?= $key['pID'] ?></strong> será eliminado.
+                                             <h5> El paciente <strong><?= $key['pID'] ?></strong> será eliminado.
                                                  ¿Estas seguro de continuar con esta acción?</h5>
-
-
                                          </div>
                                          <div class="modal-footer">
                                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
