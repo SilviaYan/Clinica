@@ -53,6 +53,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       <div class="row">
         <?php
         $aux2 = $paciente[0]['pEstado'];
+        $default = "";
         $edo1 = "";
         $edo2 = "";
         $edo3 = "";
