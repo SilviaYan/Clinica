@@ -41,7 +41,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       Fecha de Naciemiento: <input type="date" class="form-control" name="fecha" required autofocus />
     </div>
     <div class="col-xs-6 col-md-4">
-      Año(s): <input type="text" class="form-control" name="año" required autofocus />
+      Año(s): <input type="number" max="100" class="form-control" name="año" required autofocus />
     </div>
     <div class="col-xs-6 col-md-4">
       Sexo: <input type="text" class="form-control" name="sexo" required autofocus />

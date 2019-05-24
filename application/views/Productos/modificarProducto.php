@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         Marca: <input type="text" class="form-control" name="marca" value="<?=$producto[0]['pMarca']?>">
        </div>
         <div class="col-xs-6 col-md-4">
-        Precio: <input type="text" class="form-control" name="precio" value="<?=$producto[0]['pPrecio']?>">
+        Precio: <input type="number" min="1" class="form-control" name="precio" value="<?=$producto[0]['pPrecio']?>">
        </div>
         <div class="col-xs-6 col-md-4">
-        Costo: <input type="text" class="form-control" name="costo" value="<?=$producto[0]['pCosto']?>">
+        Costo: <input type="number" min="1" class="form-control" name="costo" value="<?=$producto[0]['pCosto']?>">
        </div>
      </div>
         <div>
@@ -43,10 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         Tipo: <input type="text"  name="tipo"  class="form-control" value="<?=$producto[0]['pTipo']?>" required autofocus>
         </div>
         <div class="col-xs-6 col-md-4">
-        Unidad: <input type="text" name="unidad" class="form-control" value="<?=$producto[0]['pUnidad']?>">
+        Unidad: <input type="number" min="1" name="unidad" class="form-control" value="<?=$producto[0]['pUnidad']?>">
         </div>
        <div class="col-xs-6 col-md-4">
-        Existencia: <input type="text" name="existencia" class="form-control" value="<?=$producto[0]['pExiste']?>">
+        Existencia: <input type="number" min="1" name="existencia" class="form-control" value="<?=$producto[0]['pExiste']?>">
         </div>
       </div>
         <br><br><br>

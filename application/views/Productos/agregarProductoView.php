@@ -29,10 +29,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         Marca: <input type="text" class="form-control" name="marca">
        </div>
         <div class="col-xs-6 col-md-4">
-        Precio: <input type="text" class="form-control" name="precio" >
+        Precio: <input type="number" min="1" class="form-control" name="precio" >
        </div>
         <div class="col-xs-6 col-md-4">
-        Costo: <input type="text" class="form-control" name="costo" >
+        Costo: <input type="number" min="1" class="form-control" name="costo" >
        </div>
      </div>
         <div>
@@ -43,10 +43,10 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         Tipo: <input type="text"  name="tipo"  class="form-control"  required autofocus>
         </div>
         <div class="col-xs-6 col-md-4">
-        Unidad: <input type="text" name="unidad" class="form-control" >
+        Unidad: <input type="number" name="unidad" min="1" class="form-control" >
         </div>
         <div class="col-xs-6 col-md-4">
-        Existencia: <input type="text" name="existencia" class="form-control" ></div>
+        Existencia: <input type="number" min="1" name="existencia" class="form-control" ></div>
         </div>
         <br><br><br>
          <button type="submit" class="btn btn-primary">Agregar</button> 
