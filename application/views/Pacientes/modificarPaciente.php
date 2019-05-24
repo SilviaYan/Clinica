@@ -3,6 +3,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="utf-8">
   <title>Pacientes</title>
@@ -11,6 +12,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
   <!--link-->
 </head>
+
 <body>
   <div class="container">
     <!--centrar pagina class container -->
@@ -59,6 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         $edo6 = "";
         $edo7 = "";
         $edo8 = "";
+        $edo9 = "";
         $edo10 = "";
         $edo11 = "";
         $edo12 = "";
@@ -176,11 +179,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
           case "Campeche":
             $edo31 = "selected";
             break;
+          case " ":
+          $default = "selected";
+            break;
         }
 
         ?>
         <div class="form-group col-xs-6 col-md-4">
           Estado:<select id="inputState" name="asegurado" class="form-control">
+            <option <?php echo $default ?>> Selecciona un edo</option>
             <option value="EdoMex" <?php echo $edo1 ?>> Estado de México</option>
             <option value="Jalisco" <?php echo $edo2 ?>> Jalisco</option>
             <option value="Michoacan" <?php echo $edo3 ?>> Michoacan</option>
