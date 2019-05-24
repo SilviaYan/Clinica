@@ -37,14 +37,15 @@
                         echo "URGENTE";
                       } else {
                         echo $key['pExiste'];
-                      }?></td>
+                      }
+                      ?></td>
                       <td style="color: #000000;"><?= $key['pTipo']?></td>
                       <td style="color: #000000;"><?= $key['pPrecio']?></td>
                       <td style="color: #000000;"><?= $key['pCosto']?></td>
                       <td style="color: #000000;"><?= $key['pMarca']?></td>
                       <td style="color: #000000;"><?= $key['pProv']?></td>
 
-                      <td><form action = '<?= base_url('')?>Productos/agregar' method = 'post'><button type="submit" class="btn btn-info btn-circle gira" value="<?=$key['prodID']?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form></td>
+                      <td><form action = '<?= base_url('')?>Productos/modificar' method = 'post'><button type="submit" class="btn btn-info btn-circle gira" value="<?=$key['prodID']?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form></td>
                      <!--Eliminar-->
                       <td>  <button type="button" class="btn btn-danger btn-circle gira" data-toggle="modal" data-target="#confirmacionEliminar<?=$key['prodID']?>"><i class="fas fa-trash-alt"></i></button>
 
