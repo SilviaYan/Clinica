@@ -73,7 +73,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <a href="<?= base_url('') ?>Cotizaciones">
         <div class="contenedor" id="cuatro">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
-            <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a>
+            <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Cotizaciones">Cotizaciones</a>
             <!--</span>-->
             <!-- <ul class="submenu">
                 <li><a href="#">Alta</a></li>

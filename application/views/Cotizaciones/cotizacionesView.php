@@ -1,5 +1,6 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
+
 ?>
 
 
@@ -17,26 +18,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
   </div>
 
   <div class="col-xs-6 col-md-4">
-    ID Cotización: <input type="text" class="form-control" name="cotID" value="<?php echo $id[0]?>" required autofocus readonly />
+    ID Cotización: <input type="text" class="form-control" name="cotID" value="<?php echo $id[0] ?>" required autofocus readonly />
 
   </div>
   <div class="col-xs-6 col-md-4">
     ID Usuario: <input type="text" class="form-control" name="uID" required autofocus readonly />
   </div>
   <div class="col">
-    Lugar de Expedición: <input type="text" class="form-control" name="uID" required autofocus placeholder="Ingrese algún lugar..." />
+    Lugar de Expedición: <input type="text" class="form-control" name="" required autofocus placeholder="Ingrese algún lugar..." />
   </div>
 </div>
 <!-- ROW PARTE 2-->
 <div class="row">
   <div class="col-xs-6 col-md-4">
-    ID Paciente: <input type="text" class="form-control" autofocus required />
+    <form action="<?php echo base_url(); ?>Cotizaciones/getPatient" method="POST">
+      ID Paciente: <input type="text" class="form-control" name="pID" autofocus required />
+    </form>
   </div>
   <div class="col-xs-6 col-md-4">
-    Nombre: <input type="text" class="form-control" name="cotID" autofocus readonly />
+    Nombre: <input type="text" class="form-control" value="" autofocus readonly />
   </div>
   <div class="col-xs-6 col-md-4">
-    Apellido Paterno: <input type="text" class="form-control" name="uID" autofocus readonly />
+    Apellido Paterno: <input type="text" class="form-control" value="" autofocus readonly />
   </div>
 </div>
 <!-- ROW PARTE 3 -->

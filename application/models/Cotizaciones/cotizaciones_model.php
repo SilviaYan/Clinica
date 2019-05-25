@@ -13,9 +13,9 @@ class cotizaciones_model extends CI_Model
     }
 
         /* Obtener información del paciente*/
-    function getPatient()
+    function getPatient($idP)
     {
-        $result = $this->db->query("");
+        $result = $this->db->query("select pNombre, pApellidoP from Pacientes WHERE pID ='".$idP."';");
         return $result->result_array();
     }
         /* Obtener información del producto para
@@ -29,7 +29,6 @@ class cotizaciones_model extends CI_Model
         $result = $this->db->query("CALL getNextIDCot();");
         return $result->result();
     }
-
 
     function deleteQuo($idCot){
         $resultado = $this->db->query("delete from Cotizaciones where cotID='".$idCot."';");

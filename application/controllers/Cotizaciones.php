@@ -17,7 +17,7 @@ class Cotizaciones extends CI_Controller {
         $idCot = $this->cotizaciones_model->getIDCot();
         $value = (array) $idCot[0];
         $data['id'] = $value['AUTO_INCREMENT'];
-        
+
         if ($_SESSION['login'] == 2) {
             $this->load->view('base/headAdmin');
         } else if ($_SESSION['login'] == 1) {
@@ -29,6 +29,12 @@ class Cotizaciones extends CI_Controller {
         $this->load->view('base/findoc');
     }
 
+    function getPatient()
+    {
+        $idP = $this->input->post('pID');
+        $array['paciente'] = $this->cotizaciones_model->getPatient($idP);
+        return $array;
+    }
 }
 
 ?>
