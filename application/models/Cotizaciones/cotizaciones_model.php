@@ -27,8 +27,7 @@ class cotizaciones_model extends CI_Model
 
     function getIDCot(){
         $result = $this->db->query("CALL getNextIDCot();");
-        echo $result;
-        return $result->result_array();
+        return $result->result();
     }
 
 

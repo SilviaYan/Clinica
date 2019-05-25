@@ -15,7 +15,9 @@ class Cotizaciones extends CI_Controller {
 
     public function index(){
         $idCot = $this->cotizaciones_model->getIDCot();
-        $data['id'] = $idCot;
+        $value = (array) $idCot[0];
+        $data['id'] = $value['AUTO_INCREMENT'];
+        
         if ($_SESSION['login'] == 2) {
             $this->load->view('base/headAdmin');
         } else if ($_SESSION['login'] == 1) {
@@ -26,12 +28,6 @@ class Cotizaciones extends CI_Controller {
         $this->load->view('base/js');
         $this->load->view('base/findoc');
     }
-
-
-
-
-
-
 
 }
 
