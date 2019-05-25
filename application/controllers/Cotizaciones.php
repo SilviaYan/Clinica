@@ -14,13 +14,15 @@ class Cotizaciones extends CI_Controller {
     }
 
     public function index(){
+        $idCot = $this->cotizaciones_model->getIDCot();
+        $data['id'] = $idCot;
         if ($_SESSION['login'] == 2) {
             $this->load->view('base/headAdmin');
         } else if ($_SESSION['login'] == 1) {
             $this->load->view('base/headClient');
         }
         //  $this->load->view('base/headAdmin');
-        $this->load->view('Cotizaciones/cotizacionesView');
+        $this->load->view('Cotizaciones/cotizacionesView', $data);
         $this->load->view('base/js');
         $this->load->view('base/findoc');
     }

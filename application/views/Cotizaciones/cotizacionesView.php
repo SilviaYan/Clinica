@@ -15,8 +15,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <div class="col-xs-6 col-md-4">
     Fecha: <input type="date" class="form-control" required />
   </div>
+
   <div class="col-xs-6 col-md-4">
-    ID Cotización: <input type="text" class="form-control" name="cotID" required autofocus readonly />
+    ID Cotización: <input type="text" class="form-control" name="cotID" value="<?php echo $id[0]; ?>" required autofocus readonly />
+
   </div>
   <div class="col-xs-6 col-md-4">
     ID Usuario: <input type="text" class="form-control" name="uID" required autofocus readonly />
@@ -97,7 +99,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
   </table>
 </div>
 <br> <br>
-  <!-- un form action para todo esto y que primero ingrese a la cotización, después que ingrese al detalle de cotización
+<!-- un form action para todo esto y que primero ingrese a la cotización, después que ingrese al detalle de cotización
        y genere un ticket. -->
 </div>
 <!--contenedor -- >

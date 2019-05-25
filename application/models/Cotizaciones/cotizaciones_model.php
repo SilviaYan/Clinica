@@ -25,6 +25,13 @@ class cotizaciones_model extends CI_Model
         return $result->result_array();
     }
 
+    function getIDCot(){
+        $result = $this->db->query("CALL getNextIDCot();");
+        echo $result;
+        return $result->result_array();
+    }
+
+
     function deleteQuo($idCot){
         $resultado = $this->db->query("delete from Cotizaciones where cotID='".$idCot."';");
     }
