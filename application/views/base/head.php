@@ -15,11 +15,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         <link href="<?= base_url(); ?>resource/css/radiocss.css" rel="stylesheet" />
         <link rel="stylesheet" href="<?= base_url(); ?>resource/css/fontawesome-all.css" async >
         <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
-        
-        <!--<link rel="stylesheet" href="<?= base_url(); ?>resource/css/font-awesome.css" async >
-        <link rel="stylesheet" href="<?= base_url(); ?>resource/css/TimeCircles.css" />
-        <link rel="stylesheet" href="<?= base_url(); ?>resource/css/jquery.datetimepicker.min.css"> 
-        <link rel="stylesheet" href="<?= base_url(); ?>resource/css/caja.css" />-->
     </head>
 
 

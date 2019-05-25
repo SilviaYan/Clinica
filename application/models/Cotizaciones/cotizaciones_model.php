@@ -25,6 +25,10 @@ class cotizaciones_model extends CI_Model
         return $result->result_array();
     }
 
+    function deleteQuo($idCot){
+        $resultado = $this->db->query("delete from Cotizaciones where cotID='".$idCot."';");
+    }
+
     function insertQuo(
         $idPaciente, $idUsuario,
         $fecha, $subtotal, $total,
