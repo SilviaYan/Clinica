@@ -60,8 +60,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </ul>-->
         </div>
     </a>
-
-<<<<<<< HEAD
+    
     <!--<a href="<?= base_url('') ?>Usuarios">
         <div class="contenedor" id="tres">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">
@@ -82,7 +81,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <a href="<?= base_url('') ?>Cotizaciones">
         <div class="contenedor" id="cuatro">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
-            <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a>
+             <span class="texto">--><!--<a class="texto" href="">Cotizaciones</a>-->
             <!--</span>-->
             <!-- <ul class="submenu">
 >>>>>>> 84ba6abc75aefc4b8ae9db8ec4a5efeb706d8a78

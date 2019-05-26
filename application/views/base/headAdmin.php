@@ -19,8 +19,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosPagAdmin2.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
-<<<<<<< HEAD
-=======
+
     <script src="<?= base_url(); ?>resource/js/jquery-1.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -56,7 +55,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             })
         }
     </script>
->>>>>>> 84ba6abc75aefc4b8ae9db8ec4a5efeb706d8a78
+
 </head>
 <!--<div class="container">-->
 <header>
