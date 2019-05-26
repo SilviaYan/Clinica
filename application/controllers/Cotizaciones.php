@@ -42,6 +42,24 @@ class Cotizaciones extends CI_Controller {
         }
         return print_r($paciente);
     }
+
+    public function getProducts()
+    {
+        $idProd = $this->input->get_post('txt');
+        $data = array();
+        print_r($idProd);
+            $array = $this->cotizaciones_model->getProducts();
+            $data['prod'] = $array;
+            $this->load->view('base/headerCot');
+            $this->load->view('Cotizaciones/prod_cot', $data);
+            $this->load->view('base/js');
+          $this->load->view('base/findoc');
+        
+        
+
+    }
+
+
 }
 
 ?>

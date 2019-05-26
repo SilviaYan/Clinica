@@ -70,12 +70,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <form class="form-horizontal">
               <div class="form-group">
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="p" placeholder="Buscar productos" onkeyup="load(1)">
+                  <input type="text" class="form-control" id="txt" name="txt" placeholder="Buscar productos" onkeyup="load(1)">
                 </div>
               </div>
             </form>
             <div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div><!-- Carga gif animado -->
-            <div class="outer_div"></div><!-- Datos ajax Final -->
+            <div class="outer_div"> Aquí tus datos weh.</div><!-- Datos ajax Final -->
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -85,6 +85,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
     <input type="button" id="buscarProd" name="metelosALaTabla" class="btn btn-primary " value="Añadir Productos" data-toggle="modal" data-target="#myModal" />
     <input type="submit" name="" class="btn btn-success " value="Finalizar Cotización" />
+  <form action="<?php base_url() ?>Cotizaciones/getProducts"> <BR>
+    <input type="submit" name="" class="btn btn-success " value="Ver pro_cot" />
+  </form>
   </div>
   <br><br>
   <div class="table-responsive">

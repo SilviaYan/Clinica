@@ -18,12 +18,14 @@ class cotizaciones_model extends CI_Model
         $result = $this->db->query("select pNombre, pApellidoP from Pacientes WHERE pID ='".$idP."';");
         return $result->result_array();
     }
-        /* Obtener información del producto para
+    /* Obtener información del producto para
            el detalle de cotización*/
-    function getProduct(){
-        $result = $this->db->query("");
+    function getProducts()
+    {
+        $result = $this->db->query("select * from Productos;");
         return $result->result_array();
     }
+    
 
     function getIDCot(){
         $result = $this->db->query("CALL getNextIDCot();");

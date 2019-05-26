@@ -41,10 +41,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
         };
 
         function load(page) {
-            var p = $("#buscarProd").val();
+            var p = $("input#txt").val();
             $("#loader").fadeIn('slow');
             $.ajax({
-                url: './ajax/productos_cotizacion.php?action=ajax&page=' + page + '&q=' + p,
+                url: '<?php base_url() ?>Cotizaciones/getProducts.php?action=ajax&page=' + page + '&p=' + p,
                 beforeSend: function(objeto) {
                     $('#loader').html('<img src="<?= base_url(); ?>resource/images/iconos/search.png" width="10px" height="10px"> Cargando...');
                 },
