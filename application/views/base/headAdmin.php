@@ -43,7 +43,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             $.ajax({
                 url: './ajax/productos_cotizacion.php?action=ajax&page=' + page + '&q=' + p,
                 beforeSend: function(objeto) {
-                    $('#loader').html('<img src="<?= base_url(); ?>resource/iconos/search.png"> Cargando...');
+                    $('#loader').html('<img src="<?= base_url(); ?>resource/images/iconos/search.png" width="10px" height="10px"> Cargando...');
                 },
                 success: function(data) {
                     $(".outer_div").html(data).fadeIn('slow');
