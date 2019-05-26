@@ -19,6 +19,44 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosPagAdmin2.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
+<<<<<<< HEAD
+=======
+    <script src="<?= base_url(); ?>resource/js/jquery-1.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input#resultadoBusqueda").val('');
+            load(1);
+        });
+
+        function buscar() {
+            var textoBusqueda = $("input#busqueda").val();
+            if (textoBusqueda != "") {
+                $.post("<?php base_url() ?>Cotizaciones/getPatient", {
+                    pID: textoBusqueda
+                }, function(mensaje) {
+                    $("input#resultadoBusqueda").val(mensaje);
+                });
+            } else {
+                $("input#resultadoBusqueda").val('');
+            };
+        };
+
+        function load(page) {
+            var p = $("#buscarProd").val();
+            $("#loader").fadeIn('slow');
+            $.ajax({
+                url: './ajax/productos_cotizacion.php?action=ajax&page=' + page + '&q=' + p,
+                beforeSend: function(objeto) {
+                    $('#loader').html('<img src="<?= base_url(); ?>resource/images/iconos/search.png" width="10px" height="10px"> Cargando...');
+                },
+                success: function(data) {
+                    $(".outer_div").html(data).fadeIn('slow');
+                    $('#loader').html('');
+                }
+            })
+        }
+    </script>
+>>>>>>> 84ba6abc75aefc4b8ae9db8ec4a5efeb706d8a78
 </head>
 <!--<div class="container">-->
 <header>
@@ -29,7 +67,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
     <div class="con" id="seis">
         <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
-        <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a><!--</span>-->
+        <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
+        <!--</span>-->
     </div>
 
     <a href="<?= base_url('') ?>pacientes">
@@ -48,7 +87,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <a href="<?= base_url('') ?>productos">
         <div class="contenedor" id="dos">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/medicina.png">
-           <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Productos" >Productos</a><!--</span>-->
+            <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Productos">Productos</a>
+            <!--</span>-->
             <!--<ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
@@ -60,7 +100,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <a href="<?= base_url('') ?>Usuarios">
         <div class="contenedor" id="tres">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">
-            <!--<span class="texto">--><a class="texto" href="<?= base_url(); ?>Usuarios">Usuarios</a><!--</span>-->
+            <!--<span class="texto">--><a class="texto" href="<?= base_url(); ?>Usuarios">Usuarios</a>
+            <!--</span>-->
             <!--<ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
@@ -69,20 +110,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
     </a>
 
-    <div class="contenedor" id="cuatro">
-        <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
-       <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a><!--</span>-->
-        <!-- <ul class="submenu">
+    <a href="<?= base_url('') ?>Cotizaciones">
+        <div class="contenedor" id="cuatro">
+            <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
+            <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Cotizaciones">Cotizaciones</a>
+            <!--</span>-->
+            <!-- <ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
             </ul>-->
-    </div>
+        </div>
+    </a>
 
     <div class="contenedor" id="cinco">
         <img class="icon" src="<?= base_url(); ?>resource/images/iconos/portapapeles.png">
-      <!--  <span class="texto">Consultas</span>-->
-      <a class="texto" href="">Reportes</a>
+        <!--  <span class="texto">Consultas</span>-->
+        <a class="texto" href="">Reportes</a>
         <!-- <ul class="submenu">
                 <li><a href="#">Pacientes</a></li>
                 <li><a href="#">Productos</a></li>

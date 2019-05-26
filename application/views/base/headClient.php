@@ -30,7 +30,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     
     <div class="con" id="seis">
         <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
-        <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a><!--</span>-->
+        <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
+        <!--</span>-->
     </div>
 
 <div class="menuuser">
@@ -50,7 +51,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <a href="<?= base_url('') ?>productos">
         <div class="contenedor" id="dos">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/medicina.png">
-           <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Productos" >Productos</a><!--</span>-->
+            <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Productos">Productos</a>
+            <!--</span>-->
             <!--<ul class="submenu">
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
@@ -59,6 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
     </a>
 
+<<<<<<< HEAD
     <!--<a href="<?= base_url('') ?>Usuarios">
         <div class="contenedor" id="tres">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">
@@ -75,16 +78,25 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
        <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a><!--</span>-->
         <!-- <ul class="submenu">
+=======
+    <a href="<?= base_url('') ?>Cotizaciones">
+        <div class="contenedor" id="cuatro">
+            <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
+            <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a>
+            <!--</span>-->
+            <!-- <ul class="submenu">
+>>>>>>> 84ba6abc75aefc4b8ae9db8ec4a5efeb706d8a78
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
             </ul>-->
-    </div>
+        </div>
+    </a>
 
     <div class="contenedor" id="cinco">
         <img class="icon" src="<?= base_url(); ?>resource/images/iconos/portapapeles.png">
-      <!--  <span class="texto">Consultas</span>-->
-      <a class="texto" href="">Consultas</a>
+        <!--  <span class="texto">Consultas</span>-->
+        <a class="texto" href="">Consultas</a>
         <!-- <ul class="submenu">
                 <li><a href="#">Pacientes</a></li>
                 <li><a href="#">Productos</a></li>
