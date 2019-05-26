@@ -34,13 +34,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- onkeyup="buscar();" -->
     ID Paciente: <input type="text" class="form-control" id="busqueda" name="pID" onkeyup="buscar();" autofocus required />
   </div>
-  <div id="resultadoBusqueda" class="col-xs-6 col-md-4"> Your results:</div>
-  <div class=" col-xs-6 col-md-4">
-    Nombre: <input type="text" class="form-control" value="" id="" autofocus readonly />
+  <div class="col-xs-6 col-md-8">
+    Paciente: <input type="text" class="form-control" id="resultadoBusqueda" autofocus readonly />
   </div>
-  <div class="col-xs-6 col-md-4">
-    Apellido Paterno: <input type="text" class="form-control" value="" autofocus readonly />
-  </div>
+
 </div>
 <!-- ROW PARTE 3 -->
 <div class="row">

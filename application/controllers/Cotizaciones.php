@@ -23,7 +23,6 @@ class Cotizaciones extends CI_Controller {
         } else if ($_SESSION['login'] == 1) {
             $this->load->view('base/headClient');
         }
-        //  $this->load->view('base/headAdmin');
         $this->load->view('Cotizaciones/cotizacionesView', $data);
         $this->load->view('base/js');
         $this->load->view('base/findoc');
@@ -31,17 +30,17 @@ class Cotizaciones extends CI_Controller {
 
     public function getPatient()
     {
-        $mensaje = "";
+        $array = array();
         $idP = $this->input->post('pID');
         if(isset($idP)){
             $array = $this->cotizaciones_model->getPatient($idP);
             @$nombre  = $array[0]['pNombre'];
             @$apellido = $array[0]['pApellidoP'];
 
-            $mensaje .= 'nombre:' . $nombre . '<br>
-                    apellido' . $apellido . '';
+            $paciente = $nombre." ".$apellido;
+
         }
-        return print_r( $mensaje);
+        return print_r($paciente);
     }
 }
 

@@ -20,7 +20,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script src="<?= base_url(); ?>resource/js/jquery-1.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
-            $("#resultadoBusqueda").html('Vacio');
+            $("input#resultadoBusqueda").val('');
         });
 
         function buscar() {
@@ -28,12 +28,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
             if (textoBusqueda != "") {
                 $.post("<?php base_url() ?>Cotizaciones/getPatient", {
                     pID: textoBusqueda
-                }, function(array) {
-                
-                    $("#resultadoBusqueda").html(array);
+                }, function(mensaje) {
+                    $("input#resultadoBusqueda").val(mensaje);
                 });
             } else {
-                $("#resultadoBusqueda").html('Vacio');
+                $("input#resultadoBusqueda").val('');
             };
         };
     </script>
