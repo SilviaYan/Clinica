@@ -86,4 +86,23 @@ class Usuarios extends CI_Controller {
         $this->usuarios_model->modificarUsuario($id,$nombre, $Apaterno, $Amaterno, $usuario, $contrasena, $rol);
         redirect(base_url() . 'Usuarios');
     } 
+
+    public function pdfReport()
+{
+     $user= $this->usuarios_model->getUsers();
+     $data['user'] = $user;
+
+$hora = new DateTime("now", new DateTimeZone('America/Mexico_City'));
+            //echo "Fecha: ";
+        //$hora->format('Y-m-d');
+         $data['h'] = $hora;
+
+        $hora2 = new DateTime("now", new DateTimeZone('America/Mexico_City'));
+     //$hora2->format('H:i:s');
+     $data['h2'] = $hora2;
+
+    $this->load->library('Pdf');
+    $this->load->view('Usuarios/usuariospdf',$data);
+}
+    
 }

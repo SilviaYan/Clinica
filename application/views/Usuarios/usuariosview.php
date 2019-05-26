@@ -76,5 +76,8 @@
 
      </div>
      <!-- Agregar nuevo registro-->
+     
      <a href="<?= base_url('') ?>Usuarios/nuevoUsuario" class="btn btn-info">AGREGAR</a>
+
+     <a  href="<?= base_url('') ?>Usuarios/pdfReport" class="btn btn-danger">Convertir a pdf</a>
  </div>
