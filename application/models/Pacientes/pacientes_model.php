@@ -13,8 +13,7 @@ class pacientes_model extends CI_Model {
     }
 
     function getPatients(){
-        $result = $this->db->query( "select pID, pNombre,pApellidoP, 
-        pApellidoM, email from Pacientes;");
+        $result = $this->db->query( "select * from Pacientes;");
          return $result->result_array();
     }
 

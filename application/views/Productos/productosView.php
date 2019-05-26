@@ -82,7 +82,8 @@
                 </table>
                
         </div>
+
       </div>
       <a href="<?= base_url('')?>Productos/nuevoProducto" class="btn btn-info">AGREGAR</a>
                
-      <a href="<?= base_url('')?>Productos/pdfReport" class="btn btn-danger">Convertir pdf</a>
+     <a href="<?= base_url('')?>Productos/pdfReport" class="btn btn-danger">Convertir pdf</a>

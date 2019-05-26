@@ -63,4 +63,7 @@
         </table>
     </div>
     <!-- Agregar nuevo registro-->
+</div>
     <a href="<?= base_url('') ?>Pacientes/nuevoPaciente" class="btn btn-info">AGREGAR</a>
+               
+     <a href="<?= base_url('')?>Pacientes/pdfReport" class="btn btn-danger">Convertir pdf</a>

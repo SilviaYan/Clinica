@@ -165,4 +165,24 @@ class Pacientes extends CI_Controller{
         );
         redirect(base_url() . 'Pacientes');
     }
+
+    public function pdfReport()
+{
+     $patients = $this->pacientes_model->getPatients();
+
+        $data['patients'] = $patients;
+
+$hora = new DateTime("now", new DateTimeZone('America/Mexico_City'));
+            //echo "Fecha: ";
+        //$hora->format('Y-m-d');
+         $data['h'] = $hora;
+
+        $hora2 = new DateTime("now", new DateTimeZone('America/Mexico_City'));
+     //$hora2->format('H:i:s');
+     $data['h2'] = $hora2;
+
+    $this->load->library('Pdf');
+    $this->load->view('Pacientes/pacientespdf',$data);
+}
+
 }
