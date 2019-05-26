@@ -29,11 +29,19 @@ class Cotizaciones extends CI_Controller {
         $this->load->view('base/findoc');
     }
 
-    function getPatient()
+    public function getPatient()
     {
+        $mensaje = "";
         $idP = $this->input->post('pID');
-        $array['paciente'] = $this->cotizaciones_model->getPatient($idP);
-        return $array;
+        if(isset($idP)){
+            $array = $this->cotizaciones_model->getPatient($idP);
+            @$nombre  = $array[0]['pNombre'];
+            @$apellido = $array[0]['pApellidoP'];
+
+            $mensaje .= 'nombre:' . $nombre . '<br>
+                    apellido' . $apellido . '';
+        }
+        return print_r( $mensaje);
     }
 }
 

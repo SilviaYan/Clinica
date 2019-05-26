@@ -31,12 +31,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <!-- ROW PARTE 2-->
 <div class="row">
   <div class="col-xs-6 col-md-4">
-    <form action="<?php echo base_url(); ?>Cotizaciones/getPatient" method="POST">
-      ID Paciente: <input type="text" class="form-control" name="pID" autofocus required />
-    </form>
+    <!-- onkeyup="buscar();" -->
+    ID Paciente: <input type="text" class="form-control" id="busqueda" name="pID" onkeyup="buscar();" autofocus required />
   </div>
-  <div class="col-xs-6 col-md-4">
-    Nombre: <input type="text" class="form-control" value="" autofocus readonly />
+  <div id="resultadoBusqueda" class="col-xs-6 col-md-4"> Your results:</div>
+  <div class=" col-xs-6 col-md-4">
+    Nombre: <input type="text" class="form-control" value="" id="" autofocus readonly />
   </div>
   <div class="col-xs-6 col-md-4">
     Apellido Paterno: <input type="text" class="form-control" value="" autofocus readonly />

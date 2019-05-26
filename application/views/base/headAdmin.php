@@ -17,7 +17,26 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilospagAdmin2.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
+    <script src="<?= base_url(); ?>resource/js/jquery-1.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#resultadoBusqueda").html('Vacio');
+        });
 
+        function buscar() {
+            var textoBusqueda = $("input#busqueda").val();
+            if (textoBusqueda != "") {
+                $.post("<?php base_url() ?>Cotizaciones/getPatient", {
+                    pID: textoBusqueda
+                }, function(array) {
+                
+                    $("#resultadoBusqueda").html(array);
+                });
+            } else {
+                $("#resultadoBusqueda").html('Vacio');
+            };
+        };
+    </script>
 </head>
 
 <header>
