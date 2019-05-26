@@ -5,7 +5,7 @@
         <table class="table table-hover table-striped col-12" id="" style="width:60%">
             <thead class="" style="background-color:#A1ABA1">
                 <tr>
-                    <th width="10%">Id Producto</th>
+                    <th width="10%">#</th>
                     <th width="10%">Nombre</th>
                     <th width="10%">Precio</th>
                     <th width="6%"><i class="fas fa-plus-circle"> </i> Cantidad</th>

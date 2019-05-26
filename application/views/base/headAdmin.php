@@ -44,7 +44,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             var p = $("input#txt").val();
             $("#loader").fadeIn('slow');
             $.ajax({
-                url: '<?php base_url() ?>Cotizaciones/getProducts.php?action=ajax&page=' + page + '&p=' + p,
+                url: '<?php base_url() ?>Cotizaciones/getProducts?action=ajax&page=' + page + '&p=' + p,
                 beforeSend: function(objeto) {
                     $('#loader').html('<img src="<?= base_url(); ?>resource/images/iconos/search.png" width="10px" height="10px"> Cargando...');
                 },
