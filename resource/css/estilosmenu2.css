@@ -14,7 +14,7 @@ header{
 }
 
 div.contenedor{
-	width: 200px;
+	width: 190px;
 	height: 75px;
 	float: left;
 	transition: height .4s;	

@@ -26,7 +26,7 @@ class Usuarios extends CI_Controller {
         //$this->load->view('base/headAdmin');
         $this->load->view('Usuarios/usuariosView',$data);
         $this->load->view('base/js');
-        $this->load->view('base/findoc');
+       // $this->load->view('base/findoc');
     }
 
     /*funcion editar*/

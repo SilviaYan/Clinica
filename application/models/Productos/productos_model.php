@@ -27,7 +27,7 @@ class productos_model extends CI_Model {
           'pTipo' => $tipo,
           'pProv' => $proveedor,
           'pUnidad' => $unidad,
-          'pIDAlta' => 1,
+          'pIDAlta' => $_SESSION['userid'],
           'pAlta' => date('y-m-d')
           );
 
@@ -56,7 +56,7 @@ class productos_model extends CI_Model {
           'pTipo' => $tipo,
           'pProv' => $proveedor,
           'pUnidad' => $unidad,
-          'pIDMod' => 1,
+          'pIDMod' =>$_SESSION['userid'],
           'pMod' => date('y-m-d')
           );
 
