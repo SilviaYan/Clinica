@@ -8,13 +8,21 @@
 }
 
 header{
-	margin:auto;
-	width: 1000px;
-	height: 230px;	
+	margin: auto;
+    width: 1000px;
+    height: 230px;
+
+}
+
+div.menuuser {
+    right: 265px;
+    padding-top: 10px;
+    position: absolute;
+    z-index: 2;
 }
 
 div.contenedor{
-	width: 190px;
+	width: 200px;
 	height: 75px;
 	float: left;
 	transition: height .4s;	

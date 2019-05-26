@@ -67,7 +67,7 @@ class pacientes_model extends CI_Model {
             'cirujias'        => $cirujias,
             'fracturas'       => $fracturas,
             'transfusiones'   => $transfusiones,
-            'pIDAlta'         => 1,
+            'pIDAlta'         => $_SESSION['userid'],
             'pAlta'           => date('y-m-d')
     );
         $this ->db ->insert('Pacientes', $datos);
@@ -132,7 +132,7 @@ class pacientes_model extends CI_Model {
             'cirujias'        => $cirujias,
             'fracturas'       => $fracturas,
             'transfusiones'   => $transfusiones,
-            'pIDMod'         => 1,
+            'pIDMod'         => $_SESSION['userid'],
             'pMod'           => date('y-m-d')
         );
         $this->db->where('pID', $idPaciente);

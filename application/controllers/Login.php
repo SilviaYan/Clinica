@@ -36,11 +36,13 @@ public function index() {
                 $login = 1;
                 $_SESSION['login']  = 1;
                 $idUsuario = $user[$row]['uID'];
+                $_SESSION['userid']  = $idUsuario;
                 $row = count($user);
             }else if(($usuario == "Admin") && ($password == "1234")){
                 $login = 2;
                 $_SESSION['login']  = 2;
                 $idUsuario = 1;
+                $_SESSION['userid']  = $user[$row]['uID'];
                 $row = count($user);
             }else{
                 if($row == (count($user)-1)){
@@ -63,7 +65,7 @@ public function index() {
                     $this->load->view('login/login');
                    // $this->load->view('base/footer');
                    // $this->load->view('base/js');
-                   // $this->load->view('base/findoc');
+                    $this->load->view('base/findoc');
                 break;
                 case 1:
          
@@ -73,20 +75,20 @@ public function index() {
                      //$id['log'] = $login;
 
                     $this->load->view('base/headClient');
-
+                    
 
 
                     //$this->load->view('solicitud/viewSolicitudes',$data);
 
                     //$this->load->view('base/footer');
                   //  $this->load->view('base/js');
-                   // $this->load->view('base/findoc');
+                    $this->load->view('base/findoc');
    
                 break;
                 case 2:
 
                     $this->load->view('base/headAdmin');
-                 //   $this->load->view('base/body');
+                   // $this->load->view('base/body');
                 // $this->load->view('base/menuAdmin');
                    /* $solicitud = $this->model_solicitud->getRequest();
 
@@ -96,8 +98,8 @@ public function index() {
                     $this->load->view('solicitud/viewSolicitudes',$data);*/
 
                    // $this->load->view('base/footer');
-                   // $this->load->view('base/js');
-                    //$this->load->view('base/findoc');
+                    $this->load->view('base/js');
+                    $this->load->view('base/findoc');
                 /*default;
                     */
                 break;

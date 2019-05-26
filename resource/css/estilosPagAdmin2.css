@@ -19,7 +19,7 @@ div.header2 h1 img{
 	box-shadow: 0 0 10px 5px rgba(0,0,0,0.3); 
 	margin-top:7px; 
 	padding-left: 120px;
-	padding-right: 130px;
+	padding-right: 120px;
 }
 
 div.nav{
@@ -29,10 +29,10 @@ div.nav{
 }
 
 div.contenido{
-	padding-top: 20px;
+	padding-top: 0px;
 	position: absolute; 
 	z-index: 1;
-	margin: 150px;
+	margin: 10px;
 }
 
 div.con{

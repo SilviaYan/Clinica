@@ -26,7 +26,7 @@ class Pacientes extends CI_Controller{
       //  $this->load->view('base/headAdmin');
         $this->load->view('Pacientes/pacientesView', $data);
         $this->load->view('base/js');
-        $this->load->view('base/findoc');
+      //  $this->load->view('base/findoc');
     }
 
     public function modificar(){

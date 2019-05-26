@@ -3,10 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 ?>
 <!Doctype html>
 <html class="no-js" lang="es">
-
+ 
 <head>
     <meta charset="utf-8">
     <title> </title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/normalize.css" async>
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/style.css" async>
@@ -15,8 +17,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link href="<?= base_url(); ?>resource/css/radiocss.css" rel="stylesheet" />
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/fontawesome-all.css" async>
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilospagAdmin2.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosPagAdmin2.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
+
     <script src="<?= base_url(); ?>resource/js/jquery-1.7.1.min.js"></script>
     <script>
         $(document).ready(function() {
@@ -52,9 +55,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
             })
         }
     </script>
-</head>
 
+</head>
+<!--<div class="container">-->
 <header>
+    <div class="container">
     <div class="header2">
         <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
     </div>
@@ -128,4 +133,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <li><a href="#">Cotizaciones</a></li>
             </ul>-->
     </div>
+
 </header>

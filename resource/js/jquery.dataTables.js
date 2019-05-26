@@ -11416,7 +11416,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfo": "<label style='font: oblique bold 120% cursive; color:#0B615E'>Mostrando _START_ a _END_ de _TOTAL_  resultados</label>",
+			"sInfo": "<label style='color:#257DAD; font-size: 125%; font-weight: bold;'>Mostrando _START_ a _END_ de _TOTAL_  resultados</label>",
 	
 	
 			/**
@@ -11437,7 +11437,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoEmpty": "<label style='font: oblique bold 120% cursive; color:#B40404'>Mostrando 0 a 0 de 0 resultados</label>",
+			"sInfoEmpty": "<label style='color:#257DAD; font-size: 125%; font-weight: bold;'>Mostrando 0 a 0 de 0 resultados</label>",
 	
 	
 			/**
@@ -11459,7 +11459,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sInfoFiltered": "<label style='font: oblique bold 120% cursive; color:#0B615E'>(Filtrando en base a _MAX_ registros consultados)</label>",
+			"sInfoFiltered": "<label style='color:#257DAD; font-size: 125%; font-weight: bold;'>(Filtrando en base a _MAX_ registros consultados)</label>",
 	
 	
 			/**
@@ -11577,7 +11577,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "<label style='font: oblique bold 120% cursive; color:#088A4B'>Mostrar _MENU_ resultados</label>",
+			"sLengthMenu": "<label style='color:#257DAD; font-size: 125%; font-weight: bold;'>Mostrar _MENU_ resultados</label>",
 	
 	
 			/**
@@ -11657,7 +11657,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sSearch": "<label style='font: oblique bold 120% cursive; color:#B40431'>Buscar:</label>",
+			"sSearch": "<label style='color:#257DAD; font-size: 125%; font-weight: bold;'>Buscar:</label>",
 	
 	
 			/**
@@ -11715,7 +11715,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sZeroRecords": "No se encontró ninguna coincidencia"
+			"sZeroRecords": "No se encontró ninguna coincidencia :("
 		},
 	
 	

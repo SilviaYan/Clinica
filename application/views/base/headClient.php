@@ -7,6 +7,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <head>
     <meta charset="utf-8">
     <title> </title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"> 
+    <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/normalize.css" async>
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/style.css" async>
@@ -16,21 +18,23 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/fontawesome-all.css" async>
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosPagAdmin2.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu2.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu_user.css">
 
 </head>
 
-<header align="center">
+<header >
+    <div class="container">
     <div class="header2">
         <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
     </div>
-
+    
     <div class="con" id="seis">
         <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
         <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
         <!--</span>-->
     </div>
 
+<div class="menuuser">
     <a href="<?= base_url('') ?>pacientes">
         <div class="contenedor" id="uno">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/familia.png">
@@ -56,13 +60,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </ul>-->
         </div>
     </a>
+    
+    <!--<a href="<?= base_url('') ?>Usuarios">
+        <div class="contenedor" id="tres">
+            <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">
+            <span class="texto">--><!--<a class="texto" href="<?= base_url(); ?>Usuarios">Usuarios</a>--><!--</span>-->
+            <!--<ul class="submenu">
+                <li><a href="#">Alta</a></li>
+                <li><a href="#">Baja / Modificacion</a></li>
+                <li><a href="#">Consultar</a></li>
+            </ul>-->
+       <!-- </div>
+    </a>-->
 
+    <div class="contenedor" id="cuatro">
+        <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
+       <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a><!--</span>-->
+        <!-- <ul class="submenu">
+=======
     <a href="<?= base_url('') ?>Cotizaciones">
         <div class="contenedor" id="cuatro">
             <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
-            <!-- <span class="texto">--><a class="texto" href="">Cotizaciones</a>
+             <span class="texto">--><!--<a class="texto" href="">Cotizaciones</a>-->
             <!--</span>-->
             <!-- <ul class="submenu">
+>>>>>>> 84ba6abc75aefc4b8ae9db8ec4a5efeb706d8a78
                 <li><a href="#">Alta</a></li>
                 <li><a href="#">Baja / Modificacion</a></li>
                 <li><a href="#">Consultar</a></li>
@@ -81,4 +103,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <li><a href="#">Cotizaciones</a></li>
             </ul>-->
     </div>
+ </div>
 </header>
