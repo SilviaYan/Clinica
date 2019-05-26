@@ -21,6 +21,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script>
         $(document).ready(function() {
             $("input#resultadoBusqueda").val('');
+            load(1);
         });
 
         function buscar() {
@@ -35,6 +36,21 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 $("input#resultadoBusqueda").val('');
             };
         };
+
+        function load(page) {
+            var p = $("#buscarProd").val();
+            $("#loader").fadeIn('slow');
+            $.ajax({
+                url: './ajax/productos_cotizacion.php?action=ajax&page=' + page + '&q=' + p,
+                beforeSend: function(objeto) {
+                    $('#loader').html('<img src="<?= base_url(); ?>resource/iconos/search.png"> Cargando...');
+                },
+                success: function(data) {
+                    $(".outer_div").html(data).fadeIn('slow');
+                    $('#loader').html('');
+                }
+            })
+        }
     </script>
 </head>
 
