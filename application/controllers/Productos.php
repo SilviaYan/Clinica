@@ -93,6 +93,23 @@ class Productos extends CI_Controller {
         $this->productos_model->modificarProducto($marca, $precio, $costo, $nombre, $descripcion, $tipo, $proveedor, $unidad, $existencia, $id);
         redirect(base_url() . 'Productos');
     }
+ public function pdfReport()
+{
+      $products = $this->productos_model->getProducts();
 
+        $data['products'] = $products;
+
+$hora = new DateTime("now", new DateTimeZone('America/Mexico_City'));
+            //echo "Fecha: ";
+        //$hora->format('Y-m-d');
+         $data['h'] = $hora;
+
+        $hora2 = new DateTime("now", new DateTimeZone('America/Mexico_City'));
+     //$hora2->format('H:i:s');
+     $data['h2'] = $hora2;
+
+    $this->load->library('Pdf');
+    $this->load->view('Productos/productospdf',$data);
+}
     
 }
