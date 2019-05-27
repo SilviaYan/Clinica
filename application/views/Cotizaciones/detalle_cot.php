@@ -11,16 +11,20 @@
         </thead>
         <tbody>
             <?php
+            $iva = 0;
+            $importe = 0;
+            $total = 0;
             foreach ($temp as $key) {
                 $id_temp = $key['id'];
-                $importe = 0;
+                $id = $key['idProd'];
                 $cantidad = $key['cantidad'];
                 $precio = $key['precio'];
+
                 $importe = $cantidad * $precio;
                 $iva = 0.16 * $importe;
                 $total = $importe + $iva;
                 ?>
-                <td> <?php echo $key['idProd'] ?></td>
+                <td> <?php echo $id ?></td>
                 <td> <?php echo $cantidad ?></td>
                 <td> <?php echo $precio ?></td>
                 <td> <?php echo $importe ?></td>
@@ -28,18 +32,17 @@
 
             </tbody>
         </table>
-
-        <!-- ROW PARTE 4 -->
-        <div class="row">
-            <div class="col-xs-6 col-md-4">
-                IVA: <input type="text" class="form-control" value=" <?php echo $iva ?>" readonly autofocus />
-            </div>
-            <div class="col-xs-6 col-md-4">
-                Subtotal: <input type="text" class="form-control" name="cotID" value=" <?php echo $importe ?>" autofocus readonly />
-            </div>
-            <div class="col-xs-6 col-md-4">
-                Total: <input type="text" class="form-control" name="uID" value=" <?php echo $total ?>" autofocus readonly />
-            </div>
-        </div>
     <?php } ?>
+    <!-- ROW PARTE 4 -->
+    <div class="row">
+        <div class="col-xs-6 col-md-4">
+            IVA: <input type="text" class="form-control" value=" <?php echo $iva ?>" readonly autofocus />
+        </div>
+        <div class="col-xs-6 col-md-4">
+            Subtotal: <input type="text" class="form-control" name="cotID" value=" <?php echo $importe ?>" autofocus readonly />
+        </div>
+        <div class="col-xs-6 col-md-4">
+            Total: <input type="text" class="form-control" name="uID" value=" <?php echo $total ?>" autofocus readonly />
+        </div>
+    </div>
 </div>

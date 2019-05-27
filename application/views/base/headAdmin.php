@@ -65,7 +65,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             //Inicia validacion
             if (isNaN(cantidad)) {
                 alert('Esto no es un número');
-                document.getElementById('cantidad' + id).focus();
+                document.getElementById('cantidad_' + id).focus();
                 return false;
             }
             $.ajax({
