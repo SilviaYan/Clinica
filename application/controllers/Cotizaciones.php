@@ -45,15 +45,20 @@ class Cotizaciones extends CI_Controller {
 
     public function getProducts()
     {
-            
+            $smt = $_REQUEST['p'];
+            $action  =  $_REQUEST['action'];
+            if($action == 'ajax'){
             $data = array();
-            $array = $this->cotizaciones_model->getProducts($p);
+            $array = $this->cotizaciones_model->getProducts($smt);
             $data['prod'] = $array;
             $this->load->view('base/headerCot');
             $this->load->view('Cotizaciones/prod_cot', $data);
             $this->load->view('base/js');
             $this->load->view('base/findoc');
+            }
+
     }
+
 
 }
 

@@ -22,7 +22,13 @@ class cotizaciones_model extends CI_Model
            el detalle de cotización*/
     function getProducts($something)
     {
-        $result = $this->db->query("select * from Productos WHERE nombre like '". $something."' or prodID like = '". $something. "'");
+        $result = "";
+        if($something == null){
+            $result = $this->db->query("select * from Productos;");
+        }else{
+            $result = $this->db->query("select * from Productos WHERE pProd like '%" . $something . "%' or prodID like '%" . $something . "%';");
+        }
+
         return $result->result_array();
     }
     

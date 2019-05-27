@@ -70,7 +70,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <form class="form-horizontal">
               <div class="form-group">
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="txt" name="txt" placeholder="Buscar productos" onkeyup="load(1)">
+                  <input type="text" class="form-control" id="txt" name="prod" placeholder="Buscar productos" onkeyup="load(1)">
                 </div>
               </div>
             </form>
@@ -85,9 +85,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
     <input type="button" id="buscarProd" name="metelosALaTabla" class="btn btn-primary " value="Añadir Productos" data-toggle="modal" data-target="#myModal" />
     <input type="submit" name="" class="btn btn-success " value="Finalizar Cotización" />
-  <form action="<?php base_url() ?>Cotizaciones/getProducts"> <BR>
-    <input type="submit" name="" class="btn btn-success " value="Ver pro_cot" />
-  </form>
   </div>
   <br><br>
   <div class="table-responsive">
