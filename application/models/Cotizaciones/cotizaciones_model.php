@@ -42,6 +42,25 @@ class cotizaciones_model extends CI_Model
         $resultado = $this->db->query("delete from Cotizaciones where cotID='".$idCot."';");
     }
 
+    function deleteTemp($id)
+    {
+        $resultado = $this->db->query("delete from cot_temp where id='" . $id . "';");
+    }
+
+    function getTemp(){
+        $result = $this->db->query("select * from cot_temp;");
+        return $result->result_array();
+    }
+
+    function insertTemp($id_prod, $cantidad, $precio){
+        $datos = array(
+            'idProd'       => $id_prod,
+            'cantidad'       => $cantidad,
+            'precio'    => $precio
+        );
+        $this->db->insert( 'cot_temp', $datos);
+    }
+
     function insertQuo(
         $idPaciente, $idUsuario,
         $fecha, $subtotal, $total,

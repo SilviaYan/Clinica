@@ -70,12 +70,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <form class="form-horizontal">
               <div class="form-group">
                 <div class="col-sm-6">
-                  <input type="text" class="form-control" id="txt"  placeholder="Buscar productos" onkeyup="load(1)">
+                  <input type="text" class="form-control" id="txt" placeholder="Buscar productos" onkeyup="load(1)">
                 </div>
               </div>
             </form>
             <div id="loader" style="position: absolute;	text-align: center;	top: 55px;	width: 100%;display:none;"></div><!-- Carga gif animado -->
-            <div class="outer_div"> Aquí tus datos weh.</div><!-- Datos ajax Final -->
+            <div class="outer_div"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
@@ -87,20 +87,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <input type="submit" name="" class="btn btn-success " value="Finalizar Cotización" />
   </div>
   <br><br>
-  <div class="table-responsive">
-    <table class="table-hover table table-striped table-bordered">
-      <thead class="thead-dark">
-        <tr>
-          <th scope="col"> # Producto</th>
-          <th scope="col"> N. Producto</th>
-          <th scope="col"> Cantidad</th>
-          <th scope="col"> Precio Unit.</th>
-          <th scope="col"> Importe</th>
-        </tr>
-      </thead>
-      <tbody>
+  <div id="resultados" class='col-md-12'> Aquí tu tabla debe de aparecer.</div><!-- Carga los datos ajax -->
 
-      </tbody>
-    </table>
-  </div>
 </div>

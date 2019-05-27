@@ -59,7 +59,30 @@ class Cotizaciones extends CI_Controller {
 
     }
 
-
+    public function showTable(){
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+        }
+        if (isset($_POST['cantidad'])) {
+            $cantidad = $_POST['cantidad'];
+        }
+        if (isset($_POST['precio'])) {
+            $precio = $_POST['precio'];
+        }
+        if (!empty($id) and !empty($cantidad) and !empty($precio)) {
+         $this->cotizaciones_model->insertTemp($id,$cantidad,$precio);
+        }
+        if(isset($_GET['id'])){
+            $this->cotizaciones_model->deleteTemp($_GET['id']);
+        }
+        $data = array();
+        $array = $this->cotizaciones_model->getTemp();
+        $data['temp'] = $array;
+        $this->load->view('base/headerCot');
+        $this->load->view('Cotizaciones/detalle_cot', $data);
+        $this->load->view('base/js');
+        $this->load->view('base/findoc');
+    }
 }
 
 ?>

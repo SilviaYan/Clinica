@@ -41,7 +41,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 $("input#resultadoBusqueda").val('');
             };
         };
-            /* CUANDO USAS LOAD, TE CARGA UN HTML EXTERNO EN UN DIV*/
+        /* CUANDO USAS LOAD, TE CARGA UN HTML EXTERNO EN UN DIV*/
         function load(page) {
             var p = $("input#txt").val();
             $("#loader").fadeIn('slow');
@@ -55,8 +55,9 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     $('#loader').html('');
                 }
             })
-        }
+        };
     </script>
+
 
 </head>
 <!--<div class="container">-->
