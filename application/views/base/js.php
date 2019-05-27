@@ -58,10 +58,3 @@ $(document).ready(function(){
 } );
 
 </script>
-
-
-
-
-
-
-

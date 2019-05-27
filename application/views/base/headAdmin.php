@@ -105,7 +105,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="header2">
             <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
         </div>
-
+        
         <div class="con" id="seis">
             <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
             <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
