@@ -75,7 +75,7 @@ class Cotizaciones extends CI_Controller {
         if(isset($_GET['id'])){
             $this->cotizaciones_model->deleteTemp($_GET['id']);
         }
-        $data = array();
+        
         $array = $this->cotizaciones_model->getTemp();
         $data['temp'] = $array;
         $this->load->view('base/headerCot');
