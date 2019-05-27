@@ -25,6 +25,7 @@ class Cotizaciones extends CI_Controller {
         }
         $this->load->view('Cotizaciones/cotizacionesView', $data);
         $this->load->view('base/js');
+         // $this->load->view('base/api');
         $this->load->view('base/findoc');
     }
 

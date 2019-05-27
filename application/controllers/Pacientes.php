@@ -26,6 +26,7 @@ class Pacientes extends CI_Controller{
       //  $this->load->view('base/headAdmin');
         $this->load->view('Pacientes/pacientesView', $data);
         $this->load->view('base/js');
+         // $this->load->view('base/api');
       //  $this->load->view('base/findoc');
     }
 
@@ -39,6 +40,7 @@ class Pacientes extends CI_Controller{
         $this->load->view('Pacientes/modificarPaciente', $dato);
 
         $this->load->view('base/js');
+         // $this->load->view('base/api');
         $this->load->view('base/findoc');
 
     }
@@ -106,6 +108,7 @@ class Pacientes extends CI_Controller{
         $this->load->view('base/headAdmin');
         $this->load->view('Pacientes/agregarPacienteView');
         $this->load->view('base/js');
+         // $this->load->view('base/api');
         $this->load->view('base/findoc'); 
     }
 

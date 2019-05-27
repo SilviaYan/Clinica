@@ -27,6 +27,7 @@ class Productos extends CI_Controller {
       //  $this->load->view('base/headAdmin');
         $this->load->view('Productos/productosView',$data);
         $this->load->view('base/js');
+         // $this->load->view('base/api');
       //  $this->load->view('base/body');
     }
     
@@ -39,6 +40,7 @@ class Productos extends CI_Controller {
         $this->load->view('Productos/modificarProducto', $dato);
      
         $this->load->view('base/js');
+         // $this->load->view('base/api');
         $this->load->view('base/findoc');
     }
 
@@ -71,6 +73,7 @@ class Productos extends CI_Controller {
         $this->load->view('base/headAdmin');
         $this->load->view('Productos/agregarProductoView');
         $this->load->view('base/js');
+         // $this->load->view('base/api');
         $this->load->view('base/findoc'); 
     }
 

@@ -26,6 +26,7 @@ class Usuarios extends CI_Controller {
         //$this->load->view('base/headAdmin');
         $this->load->view('Usuarios/usuariosView',$data);
         $this->load->view('base/js');
+        $this->load->view('base/api');
        // $this->load->view('base/findoc');
     }
 
@@ -37,6 +38,7 @@ class Usuarios extends CI_Controller {
         $this->load->view('base/headAdmin');
         $this->load->view('Usuarios/editarUsuario', $dato);
         $this->load->view('base/js');
+       // $this->load->view('base/api');
         $this->load->view('base/findoc');
     }
 
@@ -46,6 +48,7 @@ class Usuarios extends CI_Controller {
         $this->load->view('base/headAdmin');
         $this->load->view('Usuarios/NuevoUsuarioView');
         $this->load->view('base/js');
+         // $this->load->view('base/api');
         $this->load->view('base/findoc'); 
     }
 
