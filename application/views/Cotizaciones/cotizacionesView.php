@@ -44,18 +44,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       Pago: <input type="text" class="form-control" name="uID" value="Efectivo" autofocus readonly />
     </div>
   </div>
-  <!-- ROW PARTE 4 -->
-  <div class="row">
-    <div class="col-xs-6 col-md-4">
-      IVA: <input type="text" class="form-control" readonly autofocus />
-    </div>
-    <div class="col-xs-6 col-md-4">
-      Subtotal: <input type="text" class="form-control" name="cotID" autofocus readonly />
-    </div>
-    <div class="col-xs-6 col-md-4">
-      Total: <input type="text" class="form-control" name="uID" autofocus readonly />
-    </div>
-  </div>
+  
   <br>
   <div>
     <!-- Modal -->

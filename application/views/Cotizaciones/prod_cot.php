@@ -19,8 +19,10 @@
                     <tr>
                         <th scope="row" style="color: #000000;"><?= $key['prodID'] ?></th>
                         <td style="color: #000000;"><?= $key['pProd'] ?></td>
-                        <td style="color: #000000;"><?= $key['pCosto'] ?></td>
-                        <td> <input type="text" class="form-control text-center" value="0"></td>
+                        <td style="color: #000000;">
+                            <input type="text" class="form-control text-center"  value="<?= $key['pCosto'] ?>" id="precio_<?= $key['prodID'] ?>" readonly>
+                        </td>
+                        <td> <input type="text" class="form-control text-center" value="0" id="cantidad_<?= $key['prodID'] ?>"></td>
                         <td align="center"><a href="#" class="fa fa-plus btn btn-light" onclick="agregarProducto(<?= $key['prodID'] ?>); "></a></td>
                         </span>
                         </td>

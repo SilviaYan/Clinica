@@ -57,7 +57,46 @@ defined('BASEPATH') or exit('No direct script access allowed');
             })
         };
     </script>
+    <script>
+        function agregarProducto(id) {
+            /* los var fallan, ¿Qué debo hacer?*/
+            var precio_venta = document.getElementById('precio_' + id).value;
+            var cantidad = document.getElementById('cantidad_' + id).value;
+            //Inicia validacion
+            if (isNaN(cantidad)) {
+                alert('Esto no es un número');
+                document.getElementById('cantidad' + id).focus();
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: "<?php base_url() ?>Cotizaciones/showTable",
+                data: "id=" + id + "&precio=" + precio_venta + "&cantidad=" + cantidad,
+                beforeSend: function(objeto) {
+                    $("#resultados").html("Mensaje: Cargando...");
+                },
+                success: function(datos) {
+                    $("#resultados").html(datos);
+                }
+            });
+        };
 
+        function eliminar(id) {
+
+            $.ajax({
+                type: "GET",
+                url: "<?php base_url() ?>Cotizaciones/showTable",
+                data: "id=" + id,
+                beforeSend: function(objeto) {
+                    $("#resultados").html("Mensaje: Cargando...");
+                },
+                success: function(datos) {
+                    $("#resultados").html(datos);
+                }
+            });
+
+        };
+    </script>
 
 </head>
 <!--<div class="container">-->
