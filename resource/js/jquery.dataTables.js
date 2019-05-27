@@ -11577,7 +11577,7 @@
 			 *      } );
 			 *    } );
 			 */
-			"sLengthMenu": "<label style='color:#257DAD; font-size: 125%; font-weight: bold;'>Mostrar _MENU_ resultados</label>",
+			"sLengthMenu": "<label style='color:#000; font-size: 125%; font-weight: bold;'>Mostrar _MENU_ resultados</label>",
 	
 	
 			/**
