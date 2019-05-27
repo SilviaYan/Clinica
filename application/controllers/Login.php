@@ -75,7 +75,7 @@ public function index() {
                      //$id['log'] = $login;
 
                     $this->load->view('base/headClient');
-                    
+                    $this->load->view('base/bodyclient');
 
 
                     //$this->load->view('solicitud/viewSolicitudes',$data);
@@ -88,7 +88,7 @@ public function index() {
                 case 2:
 
                     $this->load->view('base/headAdmin');
-                   // $this->load->view('base/body');
+                    $this->load->view('base/body');
                 // $this->load->view('base/menuAdmin');
                    /* $solicitud = $this->model_solicitud->getRequest();
 
