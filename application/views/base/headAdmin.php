@@ -41,7 +41,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 $("input#resultadoBusqueda").val('');
             };
         };
-
+            /* CUANDO USAS LOAD, TE CARGA UN HTML EXTERNO EN UN DIV*/
         function load(page) {
             var p = $("input#txt").val();
             $("#loader").fadeIn('slow');
@@ -51,7 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     $('#loader').html('<img src="<?= base_url(); ?>resource/images/iconos/search.png" width="10px" height="10px"> Cargando...');
                 },
                 success: function(data) {
-                    $(".outer_div").html(data).fadeIn('slow');
+                    $(".outer_div").html(data).fadeIn('fast');
                     $('#loader').html('');
                 }
             })
