@@ -99,28 +99,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </script>
 
 </head>
-<!--<div class="container">-->
 <header>
     <div class="container">
         <div class="header2">
-            <h1><img src="<?= base_url(); ?>resource/images/imagenes/logo.png"></h1>
-        </div>
-        
-        <div style="position:absolute; left: 70%;" class="con" id="seis">
-            <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
-            <!--<span class="texto2" >--><a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
-            <!--</span>-->
+            <img src="<?= base_url(); ?>resource/images/imagenes/logo.png">
         </div>
 
         <a href="<?= base_url('') ?>pacientes">
             <div class="contenedor" id="uno">
                 <img class="icon" src="<?= base_url(); ?>resource/images/iconos/familia.png">
                 <a class="texto" href="<?= base_url(); ?>Pacientes">Pacientes</a>
-                <!--<ul class="submenu">
-                <li><a href="#">Alta</a></li>
-                <li><a href="#">Baja / Modificacion</a></li>
-                <li><a href="#">Consultar</a></li>
-            </ul>-->
             </div>
         </a>
 
@@ -128,52 +116,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <a href="<?= base_url('') ?>productos">
             <div class="contenedor" id="dos">
                 <img class="icon" src="<?= base_url(); ?>resource/images/iconos/medicina.png">
-                <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Productos">Productos</a>
-                <!--</span>-->
-                <!--<ul class="submenu">
-                <li><a href="#">Alta</a></li>
-                <li><a href="#">Baja / Modificacion</a></li>
-                <li><a href="#">Consultar</a></li>
-            </ul>-->
+                <a class="texto" href="<?= base_url(); ?>Productos">Productos</a>
             </div>
         </a>
 
         <a href="<?= base_url('') ?>Usuarios">
             <div class="contenedor" id="tres">
                 <img class="icon" src="<?= base_url(); ?>resource/images/iconos/usuario.png">
-                <!--<span class="texto">--><a class="texto" href="<?= base_url(); ?>Usuarios">Usuarios</a>
-                <!--</span>-->
-                <!--<ul class="submenu">
-                <li><a href="#">Alta</a></li>
-                <li><a href="#">Baja / Modificacion</a></li>
-                <li><a href="#">Consultar</a></li>
-            </ul>-->
+                <a class="texto" href="<?= base_url(); ?>Usuarios">Usuarios</a>
             </div>
         </a>
 
         <a href="<?= base_url('') ?>Cotizaciones">
             <div class="contenedor" id="cuatro">
                 <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
-                <!-- <span class="texto">--><a class="texto" href="<?= base_url(); ?>Cotizaciones">Cotizaciones</a>
-                <!--</span>-->
-                <!-- <ul class="submenu">
-                <li><a href="#">Alta</a></li>
-                <li><a href="#">Baja / Modificacion</a></li>
-                <li><a href="#">Consultar</a></li>
-            </ul>-->
+                <a class="texto" href="<?= base_url(); ?>Cotizaciones">Cotizaciones</a>
             </div>
         </a>
 
-        <div class="contenedor" id="cinco">
-            <img class="icon" src="<?= base_url(); ?>resource/images/iconos/portapapeles.png">
-            <!--  <span class="texto">Consultas</span>-->
-            <a class="texto" href="">Reportes</a>
-            <!-- <ul class="submenu">
-                <li><a href="#">Pacientes</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Usuarios</a></li>
-                <li><a href="#">Cotizaciones</a></li>
-            </ul>-->
-        </div>
-
+            <a href="<?= base_url('') ?>Login">
+                <div class="contenedor" id="cinco">
+                    <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
+                    <a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
+                </div>
+            </a>
 </header>

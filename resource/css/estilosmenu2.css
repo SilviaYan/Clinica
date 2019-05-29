@@ -39,7 +39,7 @@ div#cuatro{
 }
 
 div#cinco{
-	background-color: rgb(27,54,71);
+	background-color: tomato;
 	border-top-right-radius: 10px;
 	border-bottom-right-radius: 10px;
 }
@@ -63,11 +63,6 @@ a.texto{
 	transition: padding-top .4s;
 }
 
-div.contenedor:hover {
-	height: 80px;
-	
-}
-
 div.contenedor:hover .submenu{
 	display: block;
 }
@@ -80,8 +75,6 @@ div.contenedor:hover span.texto{
 div.contenedor:hover img.icon{
 	box-shadow: 0px 0px 0px 0px rgba(255,255,255,.6);
 }
-
-
 
 ul{
 	list-style: none;
@@ -98,7 +91,6 @@ ul{
 	padding: 15px 20px;
 	color: #fff;
 	background-color: rgba(255,200,3,.8);
-	display: block;
 }
 
 .submenu li a:hover{
