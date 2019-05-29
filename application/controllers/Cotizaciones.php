@@ -18,9 +18,9 @@ class Cotizaciones extends CI_Controller {
         $value = (array) $idCot[0];
         $data['id'] = $value['AUTO_INCREMENT'];
 
-        if ($_SESSION['login'] == 2) {
+        if ($_SESSION['login'] == 1) {
             $this->load->view('base/headAdmin');
-        } else if ($_SESSION['login'] == 1) {
+        } else if ($_SESSION['login'] == 2) {
             $this->load->view('base/headClient');
         }
         $this->load->view('Cotizaciones/cotizacionesView', $data);

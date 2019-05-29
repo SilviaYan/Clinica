@@ -19,16 +19,13 @@ class Productos extends CI_Controller {
 
         $data['products'] = $products;
 
-        if($_SESSION['login']==2){
+        if($_SESSION['login']==1){
              $this->load->view('base/headAdmin');
-           }else if($_SESSION['login']==1){
+           }else if($_SESSION['login']==2){
              $this->load->view('base/headClient');
            }
-      //  $this->load->view('base/headAdmin');
         $this->load->view('Productos/productosView',$data);
         $this->load->view('base/js');
-         // $this->load->view('base/api');
-      //  $this->load->view('base/body');
     }
     
 
@@ -36,11 +33,14 @@ class Productos extends CI_Controller {
         $idProducto = $this->input->post('editar');
         $dato ['producto']= $this->productos_model->obtenerValorCampos($idProducto);
 
-        $this->load->view('base/headAdmin');
+        if ($_SESSION['login'] == 1) {
+            $this->load->view('base/headAdmin');
+        } else if ($_SESSION['login'] == 2) {
+            $this->load->view('base/headClient');
+        }
         $this->load->view('Productos/modificarProducto', $dato);
      
         $this->load->view('base/js');
-         // $this->load->view('base/api');
         $this->load->view('base/findoc');
     }
 
@@ -70,7 +70,11 @@ class Productos extends CI_Controller {
 
     public function nuevoProducto(){
 
-        $this->load->view('base/headAdmin');
+        if ($_SESSION['login'] == 1) {
+            $this->load->view('base/headAdmin');
+        } else if ($_SESSION['login'] == 2) {
+            $this->load->view('base/headClient');
+        }
         $this->load->view('Productos/agregarProductoView');
         $this->load->view('base/js');
          // $this->load->view('base/api');

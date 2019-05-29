@@ -31,13 +31,13 @@ public function index() {
 
             if((($user[$row]['usuario'] == $usuario) && ($user[$row]['uPass'] == $password)) && ($user[$row]['uRol'] == "Administrador")){
                 $login = 2;
-                $_SESSION['login']  = 1;
+                $_SESSION['login']  = 1; /* 1 ES ADMIN */
                 $idUsuario = $user[$row]['uID'];
                 $_SESSION['userid']  = $idUsuario;
                 $row = count($user);
             }else if((($user[$row]['usuario'] == $usuario) && ($user[$row]['uPass'] == $password)) && ($user[$row]['uRol'] == "Ventas")){
                 $login = 1;
-                $_SESSION['login']  = 2;
+                $_SESSION['login']  = 2; /* 2 ES VENTAS*/
                 $idUsuario = 1;
                 $_SESSION['userid']  = $user[$row]['uID'];
                 $row = count($user);
@@ -65,7 +65,6 @@ public function index() {
    
                 break;
                 case 2:
-
                     $this->load->view('base/headAdmin');
                     $this->load->view('base/body');
                     $this->load->view('base/js');

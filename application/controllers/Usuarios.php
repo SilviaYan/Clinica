@@ -17,13 +17,7 @@ class Usuarios extends CI_Controller {
         $user= $this->usuarios_model->getUsers();
 
         $data['user'] = $user;
-
-          if($_SESSION['login']==2){
-             $this->load->view('base/headAdmin');
-           }else if($_SESSION['login']==1){
-             $this->load->view('base/headClient');
-           }
-        //$this->load->view('base/headAdmin');
+        $this->load->view('base/headAdmin');
         $this->load->view('Usuarios/usuariosView',$data);
         $this->load->view('base/js');
         $this->load->view('base/api');

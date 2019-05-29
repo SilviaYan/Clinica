@@ -18,9 +18,9 @@ class Pacientes extends CI_Controller{
         $patients = $this->pacientes_model->getPatients();
         $data['patients'] = $patients;
 
-          if($_SESSION['login']==2){
+          if($_SESSION['login']==1){
              $this->load->view('base/headAdmin');
-           }else if($_SESSION['login']==1){
+           }else if($_SESSION['login']==2){
              $this->load->view('base/headClient');
            }
         $this->load->view('Pacientes/pacientesView', $data);
@@ -33,7 +33,11 @@ class Pacientes extends CI_Controller{
         $idPaciente = $this->input->post('editar');
         $dato['paciente'] = $this->pacientes_model->obtenerValorCampos($idPaciente);
 
-        $this->load->view('base/headAdmin');
+        if ($_SESSION['login'] == 1) {
+            $this->load->view('base/headAdmin');
+        } else if ($_SESSION['login'] == 2) {
+            $this->load->view('base/headClient');
+        }
         $this->load->view('Pacientes/modificarPaciente', $dato);
 
         $this->load->view('base/js');
@@ -102,10 +106,13 @@ class Pacientes extends CI_Controller{
     }
 
     public function nuevoPaciente(){
-        $this->load->view('base/headAdmin');
+        if ($_SESSION['login'] == 1) {
+            $this->load->view('base/headAdmin');
+        } else if ($_SESSION['login'] == 2) {
+            $this->load->view('base/headClient');
+        }
         $this->load->view('Pacientes/agregarPacienteView');
         $this->load->view('base/js');
-         // $this->load->view('base/api');
         $this->load->view('base/findoc'); 
     }
 
