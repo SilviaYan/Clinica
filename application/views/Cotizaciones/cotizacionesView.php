@@ -75,6 +75,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <input type="submit" name="" class="btn btn-success " value="Finalizar Cotización" />
   </div>
   <br><br>
-  <div id="resultados" class='col-md-12'> Aquí tu tabla debe de aparecer.</div><!-- Carga los datos ajax -->
+  <div id="resultados" class='col-md-12'></div><!-- Carga los datos ajax -->
 
 </div>

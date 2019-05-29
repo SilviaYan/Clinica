@@ -24,7 +24,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script>
         $(document).ready(function() {
             $("input#resultadoBusqueda").val('');
-            $("#txt").val('');
             load(1);
 
         });
@@ -59,7 +58,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </script>
     <script>
         function agregarProducto(id) {
-            /* los var fallan, ¿Qué debo hacer?*/
+
             var precio_venta = document.getElementById('precio_' + id).value;
             var cantidad = document.getElementById('cantidad_' + id).value;
             //Inicia validacion
@@ -73,10 +72,13 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 url: "<?php base_url() ?>Cotizaciones/showTable",
                 data: "id=" + id + "&precio=" + precio_venta + "&cantidad=" + cantidad,
                 beforeSend: function(objeto) {
+
                     $("#resultados").html("Mensaje: Cargando...");
                 },
                 success: function(datos) {
+
                     $("#resultados").html(datos);
+
                 }
             });
         };
@@ -97,7 +99,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         };
     </script>
-
 </head>
 <header>
     <div class="container">
@@ -134,11 +135,11 @@ defined('BASEPATH') or exit('No direct script access allowed');
             </div>
         </a>
 
-            <a href="<?= base_url('') ?>Login">
-                <div class="contenedor" id="cinco">
-                    <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
-                    <a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
-                </div>
-            </a>
+        <a href="<?= base_url('') ?>Login">
+            <div class="contenedor" id="cinco">
+                <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
+                <a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
+            </div>
+        </a>
     </div>
 </header>
