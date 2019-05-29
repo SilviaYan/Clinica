@@ -11,7 +11,7 @@ class productos_model extends CI_Model {
     }
 
     function getProducts() {
-        $result = $this->db->query("select * from Productos;");
+        $result = $this->db->query("select prodID, pMarca, pPrecio, pCosto, pTipo  from Productos;");
         return $result->result_array();    
     }
     
