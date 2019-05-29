@@ -80,6 +80,18 @@ class cotizaciones_model extends CI_Model
         );
         $this->db-> insert('',$datos);
     }
+
+    function insertDC( $id_prod, $cotID, $cantidad, $precio, $importe)
+    {
+        $datos = array(
+            'pID'       => $id_prod,
+            'cvID'     => $cotID,
+            'cantidad'     => $cantidad,
+            'precio'       => $precio,
+            'importe'       => $importe
+        );
+        $this->db->insert('detalleCot', $datos);
+    }
 } /* Class */
 
 ?>

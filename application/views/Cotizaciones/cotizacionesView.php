@@ -20,7 +20,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       ID Cotización: <input type="text" class="form-control" name="cotID" value="<?php echo $id[0] ?>" required autofocus readonly />
     </div>
     <div class="col-xs-6 col-md-4">
-      ID Usuario: <input type="text" class="form-control" name="uID" required autofocus readonly />
+      ID Usuario: <input type="text" class="form-control" name="uID" value="<?= $_SESSION['userid']; ?>" required autofocus readonly />
     </div>
     <div class="col">
       Lugar de Expedición: <input type="text" class="form-control" name="exp" required autofocus placeholder="Ingrese algún lugar..." />
@@ -43,7 +43,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       Pago: <input type="text" class="form-control" name="uID" value="Efectivo" autofocus readonly />
     </div>
   </div>
-  
+
   <br>
   <div>
     <!-- Modal -->

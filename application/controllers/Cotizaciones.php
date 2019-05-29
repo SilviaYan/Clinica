@@ -84,6 +84,8 @@ class Cotizaciones extends CI_Controller {
         $this->load->view('base/js');
         $this->load->view('base/findoc');
     }
+
+    /* FALTA LA FUNCION DE AGREGAR UN REPORTE Y BORRARLO */
 }
 
 ?>
