@@ -17,9 +17,7 @@ div.header2 h1 img{
 	border-radius: 10px;
 	-webkit-box-shadow: 0 0 10px 5px rgba(255,255,255,0.3);
 	box-shadow: 0 0 10px 5px rgba(0,0,0,0.3); 
-	margin-top:7px; 
-	padding-left: 120px;
-	padding-right: 120px;
+	
 }
 
 div.nav{
@@ -42,11 +40,9 @@ div.con{
 }
 
 div.con{
-	width: 150Px;
+	width: 150px;
 	height: 60px;
 }
-
-
 
 img.icono{
 	margin: 5px;

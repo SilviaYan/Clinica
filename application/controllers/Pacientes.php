@@ -23,11 +23,8 @@ class Pacientes extends CI_Controller{
            }else if($_SESSION['login']==1){
              $this->load->view('base/headClient');
            }
-      //  $this->load->view('base/headAdmin');
         $this->load->view('Pacientes/pacientesView', $data);
         $this->load->view('base/js');
-         // $this->load->view('base/api');
-      //  $this->load->view('base/findoc');
     }
 
     public function modificar(){
