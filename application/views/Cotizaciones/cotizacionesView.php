@@ -17,7 +17,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     </div>
 
     <div class="col-xs-6 col-md-4">
-      ID Cotización: <input type="text" class="form-control" name="cotID" value="<?php echo $id[0] ?>" required autofocus readonly />
+      ID Cotización: <input type="text" class="form-control" name="cotID" id="cotID" value="<?php echo $id[0] ?>" required autofocus readonly />
     </div>
     <div class="col-xs-6 col-md-4">
       ID Usuario: <input type="text" class="form-control" name="uID" value="<?= $_SESSION['userid']; ?>" required autofocus readonly />

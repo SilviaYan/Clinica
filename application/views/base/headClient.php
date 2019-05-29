@@ -19,7 +19,85 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>resource/css/jquery.dataTables.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosPagAdmin2.css">
     <link rel="stylesheet" href="<?= base_url(); ?>resource/css/estilosmenu_user.css">
+    <script src="<?= base_url(); ?>resource/js/jquery-1.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("input#resultadoBusqueda").val('');
+            load(1);
 
+        });
+
+        function buscar() {
+            var textoBusqueda = $("input#busqueda").val();
+            if (textoBusqueda != "") {
+                $.post("<?php base_url() ?>Cotizaciones/getPatient", {
+                    pID: textoBusqueda
+                }, function(mensaje) {
+                    $("input#resultadoBusqueda").val(mensaje);
+                });
+            } else {
+                $("input#resultadoBusqueda").val('');
+            };
+        };
+        /* CUANDO USAS LOAD, TE CARGA UN HTML EXTERNO EN UN DIV*/
+        function load(page) {
+            var p = $("input#txt").val();
+            $("#loader").fadeIn('slow');
+            $.ajax({
+                url: '<?php base_url() ?>Cotizaciones/getProducts?action=ajax&page=' + page + '&p=' + p,
+                beforeSend: function(objeto) {
+                    $('#loader').html('<img src="<?= base_url(); ?>resource/images/iconos/search.png" width="10px" height="10px"> Cargando...');
+                },
+                success: function(data) {
+                    $(".outer_div").html(data).fadeIn('fast');
+                    $('#loader').html('');
+                }
+            })
+        };
+    </script>
+    <script>
+        function agregarProducto(id) {
+            var cotID = $("input#cotID").val();
+            var precio_venta = document.getElementById('precio_' + id).value;
+            var cantidad = document.getElementById('cantidad_' + id).value;
+            //Inicia validacion
+            if (isNaN(cantidad)) {
+                alert('Esto no es un número');
+                document.getElementById('cantidad_' + id).focus();
+                return false;
+            }
+            $.ajax({
+                type: "POST",
+                url: "<?php base_url() ?>Cotizaciones/showTable",
+                data: "id=" + id + "&precio=" + precio_venta + "&cantidad=" + cantidad + "&cot=" + cotID,
+                beforeSend: function(objeto) {
+
+                    $("#resultados").html("Mensaje: Cargando...");
+                },
+                success: function(datos) {
+
+                    $("#resultados").html(datos);
+
+                }
+            });
+        };
+
+        function eliminar(id) {
+
+            $.ajax({
+                type: "GET",
+                url: "<?php base_url() ?>Cotizaciones/showTable",
+                data: "id=" + id,
+                beforeSend: function(objeto) {
+                    $("#resultados").html("Mensaje: Cargando...");
+                },
+                success: function(datos) {
+                    $("#resultados").html(datos);
+                }
+            });
+
+        };
+    </script>
 </head>
 
 <header>

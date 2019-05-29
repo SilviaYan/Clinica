@@ -11,13 +11,14 @@ class Cotizaciones extends CI_Controller {
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->library('session');
+        
     }
 
     public function index(){
         $idCot = $this->cotizaciones_model->getIDCot();
         $value = (array) $idCot[0];
         $data['id'] = $value['AUTO_INCREMENT'];
-
+        
         if ($_SESSION['login'] == 1) {
             $this->load->view('base/headAdmin');
         } else if ($_SESSION['login'] == 2) {
@@ -71,7 +72,8 @@ class Cotizaciones extends CI_Controller {
             $precio = $_POST['precio'];
         }
         if (!empty($id) and !empty($cantidad) and !empty($precio)) {
-         $this->cotizaciones_model->insertTemp($id,$cantidad,$precio);
+         $cot = $_POST['cot'];
+         $this->cotizaciones_model->insertTemp($id,$cot,$cantidad,$precio);
         }
         if(isset($_GET['id'])){
             $this->cotizaciones_model->deleteTemp($_GET['id']);

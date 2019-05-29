@@ -52,11 +52,12 @@ class cotizaciones_model extends CI_Model
         return $result->result_array();
     }
 
-    function insertTemp($id_prod, $cantidad, $precio){
+    function insertTemp($id_prod,$cot, $cantidad, $precio){
         $datos = array(
-            'idProd'       => $id_prod,
-            'cantidad'       => $cantidad,
-            'precio'    => $precio
+            'idProd'     => $id_prod,
+            'cvID'     => $cot,
+            'cantidad'   => $cantidad,
+            'precio'     => $precio
         );
         $this->db->insert( 'cot_temp', $datos);
     }
