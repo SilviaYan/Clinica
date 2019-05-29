@@ -11,7 +11,7 @@ class login_model extends CI_Model {
     }
 
     public function getUsers(){
-    	$result = $this->db->query("select uID, usuario, uPass from SignUp;");
+    	$result = $this->db->query("select uID, usuario, uPass, uRol from SignUp;");
 
     	return $result->result_array();
     }

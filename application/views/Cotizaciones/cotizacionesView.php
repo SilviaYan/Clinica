@@ -3,7 +3,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 ?>
 
-
 <div class="container">
   <div style="float:right;" /><!-- ahora es de tipo flotante y se posiciona hacia la izquierda-->
 
@@ -24,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
       ID Usuario: <input type="text" class="form-control" name="uID" required autofocus readonly />
     </div>
     <div class="col">
-      Lugar de Expedición: <input type="text" class="form-control" name="" required autofocus placeholder="Ingrese algún lugar..." />
+      Lugar de Expedición: <input type="text" class="form-control" name="exp" required autofocus placeholder="Ingrese algún lugar..." />
     </div>
   </div>
   <!-- ROW PARTE 2-->

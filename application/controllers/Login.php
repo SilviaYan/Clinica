@@ -27,19 +27,16 @@ public function index() {
         $password = $this->input->post('password');
  
         $user = $this->login_model->getUsers();
-        //print_r($user);
-        //exit;
-       // session_start();
         for ($row = 0; $row < count($user); $row++) {
 
-            if((($user[$row]['usuario'] == $usuario) && ($user[$row]['uPass'] == $password)) && (($usuario != "Admin") && ($password != "1234"))){
-                $login = 1;
+            if((($user[$row]['usuario'] == $usuario) && ($user[$row]['uPass'] == $password)) && ($user[$row]['uRol'] == "Administrador")){
+                $login = 2;
                 $_SESSION['login']  = 1;
                 $idUsuario = $user[$row]['uID'];
                 $_SESSION['userid']  = $idUsuario;
                 $row = count($user);
-            }else if(($usuario == "Admin") && ($password == "1234")){
-                $login = 2;
+            }else if((($user[$row]['usuario'] == $usuario) && ($user[$row]['uPass'] == $password)) && ($user[$row]['uRol'] == "Ventas")){
+                $login = 1;
                 $_SESSION['login']  = 2;
                 $idUsuario = 1;
                 $_SESSION['userid']  = $user[$row]['uID'];
@@ -57,31 +54,13 @@ public function index() {
              // $_SESSION['login']  = $login;
             switch($login){
                 case 0:
-
-                    //$this->principal_model->updateUserActual('0');
-                    //print_r("Error de Login");
                     echo '<script language="javascript">alert("Inicio de Sesión Incorrecto");</script>';
-                    //$this->load->view('base/head');
                     $this->load->view('login/login');
-                   // $this->load->view('base/footer');
-                   // $this->load->view('base/js');
                     $this->load->view('base/findoc');
                 break;
                 case 1:
-         
-                  /*   $solicitud = $this->model_solicitud->getRequest();
-
-                     $data['solicitud'] = $solicitud;*/
-                     //$id['log'] = $login;
-
                     $this->load->view('base/headClient');
                     $this->load->view('base/bodyclient');
-
-
-                    //$this->load->view('solicitud/viewSolicitudes',$data);
-
-                    //$this->load->view('base/footer');
-                  //  $this->load->view('base/js');
                     $this->load->view('base/findoc');
    
                 break;
@@ -89,15 +68,6 @@ public function index() {
 
                     $this->load->view('base/headAdmin');
                     $this->load->view('base/body');
-                // $this->load->view('base/menuAdmin');
-                   /* $solicitud = $this->model_solicitud->getRequest();
-
-                     $data['solicitud'] = $solicitud;
-
-
-                    $this->load->view('solicitud/viewSolicitudes',$data);*/
-
-                   // $this->load->view('base/footer');
                     $this->load->view('base/js');
                     $this->load->view('base/findoc');
                 /*default;
@@ -107,4 +77,12 @@ public function index() {
         }
      
     }
+
+    public function salir(){
+        session_start();
+        session_destroy();
+        redirect(base_url() . 'Login');
+    }
+
+
 }

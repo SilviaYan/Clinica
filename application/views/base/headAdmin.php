@@ -140,4 +140,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
                 </div>
             </a>
+    </div>
 </header>
