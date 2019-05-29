@@ -24,11 +24,11 @@
             ?>
            <tr>
              <th scope="row" style="color: #000000;"><?= $key['prodID'] ?></th>
-             
-             <td style="color: #000000;"><?= $key['pTipo'] ?></td>
+
+             <td style="color: #000000;"><?= $key['pMarca'] ?></td>
              <td style="color: #000000;"><?= $key['pPrecio'] ?></td>
              <td style="color: #000000;"><?= $key['pCosto'] ?></td>
-             <td style="color: #000000;"><?= $key['pMarca'] ?></td>
+             <td style="color: #000000;"><?= $key['pTipo'] ?></td>
 
              <td>
                <form action='<?= base_url('') ?>Productos/modificar' method='post'><button type="submit" class="btn btn-info btn-circle gira" value="<?= $key['prodID'] ?>" id="editar" name="editar"><i class="fas fa-pencil-alt"></i></button></form>
