@@ -55,7 +55,7 @@ class cotizaciones_model extends CI_Model
     function insertTemp($id_prod,$cot, $cantidad, $precio){
         $datos = array(
             'idProd'     => $id_prod,
-            'cvID'     => $cot,
+            'cvID'       => $cot,
             'cantidad'   => $cantidad,
             'precio'     => $precio
         );
@@ -64,35 +64,37 @@ class cotizaciones_model extends CI_Model
 
     function insertQuo(
         $idPaciente, $idUsuario,
-        $fecha, $subtotal, $total,
-        $lugarExp, $pago, $iva 
+        $fecha, $lugarExp, $pago, $id
     ){
         $datos = array(
             'pID'       => $idPaciente,
             'uID'       => $idUsuario,
             'cFecha'    => $fecha,
-            'cSubtotal' => $subtotal,
-            'cTotal'    => $total,
             'cLugarExp' => $lugarExp,
             'cPago'     => $pago,
-            'cIva'      => $iva,
-            'cIDAlta'   => 1,
+            'cIDAlta'   => $id,
             'cAlta'     => date('y-m-d')
         );
-        $this->db-> insert('',$datos);
+        $this->db-> insert('Cotizaciones',$datos);
     }
 
-    function insertDC( $id_prod, $cotID, $cantidad, $precio, $importe)
+    function insertDC($id_prod, $cotID, $cantidad, $precio, $importe)
     {
         $datos = array(
             'pID'       => $id_prod,
-            'cvID'     => $cotID,
-            'cantidad'     => $cantidad,
-            'precio'       => $precio,
-            'importe'       => $importe
+            'cvID'      => $cotID,
+            'cantidad'  => $cantidad,
+            'precio'    => $precio,
+            'importe'   => $importe
         );
         $this->db->insert('detalleCot', $datos);
     }
+
+    function truncarTemporal(){
+        $resultado = $this->db->query("truncate table cot_temp;");
+    }
+
+
 } /* Class */
 
 ?>
