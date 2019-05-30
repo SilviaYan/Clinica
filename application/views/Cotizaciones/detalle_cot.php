@@ -44,12 +44,12 @@
 <!-- ROW PARTE 4 -->
 <div class="row">
     <div class="col-xs-6 col-md-4">
-        IVA: <input type="text" class="form-control" name="IVA" value=" <?php echo $sumador_iva ?>" readonly autofocus />
+        IVA: <input type="text" class="form-control" name="IVA" id="IVA" value=" <?php echo $sumador_iva ?>" readonly autofocus />
     </div>
     <div class="col-xs-6 col-md-4">
-        Subtotal: <input type="text" class="form-control" name="subtotal" value=" <?php echo $sumador_importe ?>" autofocus readonly />
+        Subtotal: <input type="text" class="form-control" name="subtotal" id="subtotal" value=" <?php echo $sumador_importe ?>" autofocus readonly />
     </div>
     <div class="col-xs-6 col-md-4">
-        Total: <input type="text" class="form-control" name="total" value=" <?php echo $sumador_total ?>" autofocus readonly />
+        Total: <input type="text" class="form-control" name="total" id="total" value=" <?php echo $sumador_total ?>" autofocus readonly />
     </div>
 </div>

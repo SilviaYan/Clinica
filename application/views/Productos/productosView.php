@@ -25,7 +25,7 @@
            <tr>
              <th scope="row" style="color: #000000;"><?= $key['prodID'] ?></th>
 
-             <td style="color: #000000;"><?= $key['pMarca'] ?></td>
+             <td style="color: #000000;"><?= $key['pProd'] ?></td>
              <td style="color: #000000;"><?= $key['pPrecio'] ?></td>
              <td style="color: #000000;"><?= $key['pCosto'] ?></td>
              <td style="color: #000000;"><?= $key['pTipo'] ?></td>

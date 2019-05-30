@@ -58,7 +58,7 @@ class Cotizaciones extends CI_Controller {
             $this->load->view('base/js');
             $this->load->view('base/findoc');
             }
-
+            
     }
 
     public function showTable(){
@@ -88,6 +88,22 @@ class Cotizaciones extends CI_Controller {
     }
 
     /* FALTA LA FUNCION DE AGREGAR UN REPORTE Y BORRARLO */
+     public function agregarCotizacion(){
+        $fecha = $this->input->post('fecha');
+        $idCot = $this->input->post('cotID');
+        $idUsuario = $this->input->post('uID');
+        $lugarExp = $this->input->post('exp');
+        $idPaciente = $this->input->post('pID');
+        $pago = $this->input->post('pago');
+        $iva = $_POST['iva'];
+        $subtotal = $_POST['subtotal'];
+        $total = $_POST['total'];
+
+        $array = array( $fecha, $idCot, $idUsuario, $lugarExp, $idPaciente, $pago,
+                $iva,$subtotal,$total);
+
+        print_r($array);
+    }
 }
 
 ?>

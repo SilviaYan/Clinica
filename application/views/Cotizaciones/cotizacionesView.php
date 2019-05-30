@@ -13,7 +13,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <!-- ROW PARTE 1 -->
   <div class="row">
     <div class="col-xs-6 col-md-4">
-      Fecha: <input type="date" class="form-control" required />
+      <form name="cotizacion" id="cotizacion" action="<?php echo base_url(); ?>Cotizaciones/agregarCotizacion" method="post">
+        Fecha: <input type="date" name="fecha" class="form-control" required />
     </div>
 
     <div class="col-xs-6 col-md-4">
@@ -29,7 +30,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <!-- ROW PARTE 2-->
   <div class="row">
     <div class="col-xs-6 col-md-4">
-      <!-- onkeyup="buscar();" -->
       ID Paciente: <input type="text" class="form-control" id="busqueda" name="pID" onkeyup="buscar();" autofocus required />
     </div>
     <div class="col-xs-6 col-md-8">
@@ -40,11 +40,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
   <!-- ROW PARTE 3 -->
   <div class="row">
     <div class="col-xs-6 col-md-4">
-      Pago: <input type="text" class="form-control" name="uID" value="Efectivo" autofocus readonly />
+      Pago: <input type="text" class="form-control" name="pago" value="Efectivo" autofocus readonly />
     </div>
   </div>
-
   <br>
+  <input type="button" id="buscarProd" name="metelosALaTabla" class="btn btn-primary " value="Añadir Productos" data-toggle="modal" data-target="#myModal" />
+  <input type="submit" value="Finalizar Cotización" class="btn btn-success" />
+  <br><br>
+  </form>
+  <div id="resultados" class='col-md-12'></div><!-- Carga los datos ajax -->
+
   <div>
     <!-- Modal -->
     <div class="modal fade bs-example-modal-lg" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -71,10 +76,5 @@ defined('BASEPATH') or exit('No direct script access allowed');
         </div>
       </div>
     </div>
-    <input type="button" id="buscarProd" name="metelosALaTabla" class="btn btn-primary " value="Añadir Productos" data-toggle="modal" data-target="#myModal" />
-    <input type="submit" name="" class="btn btn-success " value="Finalizar Cotización" />
   </div>
-  <br><br>
-  <div id="resultados" class='col-md-12'></div><!-- Carga los datos ajax -->
-
 </div>

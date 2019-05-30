@@ -61,6 +61,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             var cotID = $("input#cotID").val();
             var precio_venta = document.getElementById('precio_' + id).value;
             var cantidad = document.getElementById('cantidad_' + id).value;
+
             //Inicia validacion
             if (isNaN(cantidad)) {
                 alert('Esto no es un número');
@@ -72,13 +73,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 url: "<?php base_url() ?>Cotizaciones/showTable",
                 data: "id=" + id + "&precio=" + precio_venta + "&cantidad=" + cantidad + "&cot=" + cotID,
                 beforeSend: function(objeto) {
-
                     $("#resultados").html("Mensaje: Cargando...");
                 },
                 success: function(datos) {
-
                     $("#resultados").html(datos);
-
                 }
             });
         };
