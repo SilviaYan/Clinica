@@ -26,9 +26,9 @@ class usuarios_model extends CI_Model {
           'usuario' => $usuario,
           'uPass' => $contrasena,
           'uRol' => $rol,
-          'uIDMod' => 1,
+          'uIDMod' => $_SESSION['userid'],
           'uMod' => date('y-m-d'),
-          'uIDAlta' => 1,
+          'uIDAlta' => $_SESSION['userid'],
           'uAlta' => date('y-m-d')
           );
 
@@ -55,7 +55,7 @@ class usuarios_model extends CI_Model {
     'usuario' => $usuario,
     'uPass' => $contrasena,
     'uRol' => $rol,
-    'uIDMod' => 1,
+    'uIDMod' => $_SESSION['userid'],
     'uMod' => date('y-m-d')
           );
 
