@@ -117,29 +117,32 @@ class Cotizaciones extends CI_Controller {
         $idPaciente = $this->input->post('pID');
         $pago = $this->input->post('pago');
 
-        $this->cotizaciones_model->insertQuo(
-            $idPaciente,
-            $idUsuario,
-            $fecha,
-            $lugarExp,
-            $pago,
-            $idUsuario
-        );
-
         /* después te traes los datos de la tabla temporal */
         $array = $this->cotizaciones_model->getTemp();
-        $importe = 0;
-        foreach ($array as $key) {
-            $idProd = $key['idProd'];
-            $cvID = $key['cvID'];
-            $cantidad = $key['cantidad'];
-            $precio = $key['precio'];
-            $importe = $cantidad * $precio;
-            $this->cotizaciones_model->insertDC($idProd, $cvID, $cantidad, $precio, $importe);
+        if($array != null){
+            $this->cotizaciones_model->insertQuo(
+                $idPaciente,
+                $idUsuario,
+                $fecha,
+                $lugarExp,
+                $pago,
+                $idUsuario
+            );
+            $importe = 0;
+            foreach ($array as $key) {
+                $idProd = $key['idProd'];
+                $cvID = $key['cvID'];
+                $cantidad = $key['cantidad'];
+                $precio = $key['precio'];
+                $importe = $cantidad * $precio;
+                $this->cotizaciones_model->insertDC($idProd, $cvID, $cantidad, $precio, $importe);
+            }
+            $this->cotizaciones_model->truncarTemporal();
+            redirect(base_url() . 'Cotizaciones/cotizacionesList');
+        }else{
+            echo "<script> alert('Necesitas productos.'); </script>";
+            $this -> index();
         }
-        $this->cotizaciones_model->truncarTemporal();
-        redirect(base_url() . 'Cotizaciones/cotizacionesList');
     }
 }
-
 ?>
