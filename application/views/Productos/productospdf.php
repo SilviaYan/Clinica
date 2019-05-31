@@ -16,25 +16,20 @@ $html=' <br><br>
 </div> 
 
 <div> Fecha: '.$h->format('Y-m-d').' <br>
- hora: '.$h2->format('H:i:s').'
+ hora: '.$h2->format('H:i:s'). '
 </div>
 
 <br>
- <h3 align="center">Datos De Los Prodcutos</h3>
+ <h3 align="center">Datos De Los Productos</h3>
       <h4 align="center">Prodcutos</h4>
          
      <table width="100%" align="center" border="1">
       <tr>
     <th style="padding:12px; background-color:red;" width="5%">id</th>
     <th style="padding:12px; background-color:red;" width="10%">Nombre</th>
-    <th style="padding:12px; background-color:red;" width="15%">Descripcion</th>
-    <th style="padding:12px; background-color:red;" width="10%">unidad de medida</th>
-    <th style="padding:12px; background-color:red;" width="10%">existencia</th>
-    <th style="padding:12px; background-color:red;" width="10%">categoria o tipo</th>
     <th style="padding:12px; background-color:red;" width="5%">precio</th>
     <th style="padding:12px; background-color:red;" width="5%">costo</th>
-    <th style="padding:12px; background-color:red;" width="15%">marca</th>
-    <th style="padding:12px; background-color:red;" width="15%">proveedor</th>
+        <th style="padding:12px; background-color:red;" width="10%">categoria o tipo</th>
 
    </tr>';
                     foreach ($products as $key) {
@@ -44,18 +39,13 @@ $html=' <br><br>
  <tr>
                      <td scope="row" style="color: #000000;">'.$key['prodID'].'</td>
                       <td style="color: #000000;">'.$key['pProd'].'</td>
-                      <td style="color: #000000;">'.$key['pDesc'].'</td>
-                      <td style="color: #000000;">'.$key['pUnidad'].'</td>
-                      <td style="color: #000000;">'.$key['pExiste'].'</td>
-                      <td style="color: #000000;">'.$key['pTipo'].'</td>
                       <td style="color: #000000;">'. $key['pPrecio'].'</td>
-                      <td style="color: #000000;">'.$key['pCosto'].'</td>
-                      <td style="color: #000000;">'.$key['pMarca'].'</td>
-                      <td style="color: #000000;">'.$key['pProv'].'</td>
+                      <td style="color: #000000;">'.$key['pCosto']. '</td>
+                      <td style="color: #000000;">' . $key['pTipo'] . '</td>
 </tr>';
                 }
             
          $html .= '</table>';
 
 $pdf->writeHTML($html, true, false, true, false, '');
-$pdf->Output('Prodcutos.pdf', 'I');
+$pdf->Output('Productos.pdf', 'I');
