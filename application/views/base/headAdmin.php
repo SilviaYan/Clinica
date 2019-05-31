@@ -130,6 +130,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
             <div class="contenedor" id="cuatro">
                 <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
                 <a class="texto" href="<?= base_url(); ?>Cotizaciones">Cotizaciones</a>
+                <ul class="submenu">
+                <li><a href="#">Lista Cotizaciones</a></li>
             </div>
         </a>
 

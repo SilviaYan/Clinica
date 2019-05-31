@@ -86,19 +86,17 @@ ul{
 
 .submenu{
 	position: absolute;
-	width: 200px;
+	background-color: rgb(22, 187, 162);
+	width: 190px;
 	display: none;
 }
 
 .submenu > li > a {
-	display: white;
 	padding: 15px 20px;
 	color: #fff;
-	background-color: rgba(255,200,3,.8);
+	background-color: rgb(22, 187, 162);
 }
 
 .submenu li a:hover{
-	color: black;
-	background-color: rgb(208,80,30);
 	transition: all .4s;
 }
