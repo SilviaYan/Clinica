@@ -26,9 +26,31 @@ class Cotizaciones extends CI_Controller {
         }
         $this->load->view('Cotizaciones/cotizacionesView', $data);
         $this->load->view('base/js');
-         // $this->load->view('base/api');
         $this->load->view('base/findoc');
     }
+
+    public function cotizacionesList(){
+
+        $cot= $this->cotizaciones_model->getCot();
+        $data['cot'] = $cot;
+        if ($_SESSION['login'] == 1) {
+            $this->load->view('base/headAdmin');
+        } else if ($_SESSION['login'] == 2) {
+            $this->load->view('base/headClient');
+        }
+        $this->load->view('Cotizaciones/cotizacionesList', $data);
+        $this->load->view('base/js');
+        $this->load->view('base/findoc');
+
+    }
+
+    public function eliminar(){
+        $idCotSelected = $this->input->post('eliminar');
+        $this->cotizaciones_model->deleteQuoDet($idCotSelected);
+        $this->cotizaciones_model->deleteQuo($idCotSelected);
+        redirect(base_url() . 'Cotizaciones');
+    }
+
 
     public function getPatient()
     {
@@ -116,8 +138,7 @@ class Cotizaciones extends CI_Controller {
             $this->cotizaciones_model->insertDC($idProd, $cvID, $cantidad, $precio, $importe);
         }
         $this->cotizaciones_model->truncarTemporal();
-        redirect(base_url() . 'Cotizaciones');
-        
+        redirect(base_url() . 'Cotizaciones/cotizacionesList');
     }
 }
 

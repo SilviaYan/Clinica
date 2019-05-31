@@ -131,15 +131,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
                 <img class="icon" src="<?= base_url(); ?>resource/images/iconos/dinero.png">
                 <a class="texto" href="<?= base_url(); ?>Cotizaciones">Cotizaciones</a>
                 <ul class="submenu">
-                <li><a href="#">Lista Cotizaciones</a></li>
+                    <li><a href="<?= base_url('') ?>Cotizaciones/cotizacionesList">Lista Cotizaciones</a></li>
             </div>
         </a>
 
-        <a href="<?= base_url('') ?>Login">
-            <div class="contenedor" id="cinco">
-                <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
-                <a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
+        <a href=" <?= base_url('') ?>Login">
+                            <div class="contenedor" id="cinco">
+                                <img class="icono" src="<?= base_url(); ?>resource/images/iconos/salida.png">
+                                <a class="texto2" href="<?= base_url(); ?>Login">Logout</a>
+                            </div>
+                        </a>
             </div>
-        </a>
-    </div>
 </header>

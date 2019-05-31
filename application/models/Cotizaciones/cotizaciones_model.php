@@ -38,10 +38,19 @@ class cotizaciones_model extends CI_Model
         return $result->result();
     }
 
+    function getCot(){
+        $result = $this->db->query("select cotID, pID, cFecha, cPago from Cotizaciones;");
+        return $result->result_array();
+    }
+
+
     function deleteQuo($idCot){
         $resultado = $this->db->query("delete from Cotizaciones where cotID='".$idCot."';");
     }
 
+    function deleteQuoDet($idCot){
+        $resultado = $this->db->query( "delete from detalleCot where cvID='" . $idCot . "';");
+    }
     function deleteTemp($id)
     {
         $resultado = $this->db->query("delete from cot_temp where id='" . $id . "';");
